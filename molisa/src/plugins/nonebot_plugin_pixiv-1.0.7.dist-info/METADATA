@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-pixiv
+Version: 1.0.7
+Summary: pixiv.net 查询图片，支持动图和多图
+Home-page: https://github.com/anlen123/nonebot_plugin_pixiv
+Author: anlen123
+Author-email: 1761512493@qq.com
+Maintainer: anlen123
+Maintainer-email: 1761512493@qq.com
+License: UNKNOWN
+Platform: all
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: nonebot-adapter-onebot (<3.0.0,>=2.0.0-beta.1)
+Requires-Dist: nonebot2 (<3.0.0,>=2.0.0-beta.1)
+Requires-Dist: opencv-python
+
+<!--
+ * @Author         : anlen123
+ * @Date           : 2022-02-15 00:00:00
+ * @LastEditors    : anlen123
+ * @LastEditTime   : 2022-02-15 00:00:00
+ * @Description    : None
+ * @GitHub         : https://github.com/anlen123/nonebot_plugin_pixiv
+-->
+
+<p align="center">
+  <a href="https://v2.nonebot.dev/"><img src="https://v2.nonebot.dev/logo.png" width="200" height="200" alt="nonebot"></a>
+</p>
+
+<div align="center">
+
+# nonebot_plugin_pixiv
+
+_✨ NoneBot pixiv.net查询图片插件(支持多图和动图) ✨_
+
+</div>
+
+<p align="center">
+  <a href="https://raw.githubusercontent.com/cscs181/QQ-Github-Bot/master/LICENSE">
+    <img src="https://img.shields.io/github/license/cscs181/QQ-Github-Bot.svg" alt="license">
+  </a>
+  <a href="https://pypi.python.org/pypi/nonebot-plugin-pixiv">
+    <img src="https://img.shields.io/pypi/v/nonebot-plugin-pixiv.svg" alt="pypi">
+  </a>
+  <img src="https://img.shields.io/badge/python-3.7+-blue.svg" alt="python">
+</p>
+
+## 使用方式
+pixiv pid
+
+例如：
+
+pixiv 233
+
+pixiv 1000
+
+pixivRank 1
+日榜
+
+pixivRank 7 
+周榜
+
+pixivRank 30
+月榜
+
+直接发这种连接也能直接识别发送图片
+
+https://www.pixiv.net/artworks/(\d+)|illust_id=(\d+)
+
+
+
+## 配置
+一共有四个配置项目
+
+
+IMGROOT=/E:\pixiv
+
+AIOHTTP=http://72.36.112.74:3128
+
+FFMPEG=E:\ffmpeg\bin
+
+PIXIV_COOKIES=GA1.3.956338550.1652406212
+
+分别是:
+
+1.保存图片的根目录
+
+2.http代理地址
+
+3.ffmpeg地址(不配置这个不支持动图)
+
+4.你的p站的cookies (不配置不支持R18)
+
+
+
+## 安装
+pip install nonebot-plugin-pixiv
+
+## 使用
+nonebot.load_plugin('nonebot_plugin_pixiv')
+
+
+# 已适配nonebot beta版本
+
+

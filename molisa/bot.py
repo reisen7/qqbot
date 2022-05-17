@@ -16,10 +16,10 @@ from nonebot.adapters.onebot.v11 import Adapter as ONEBOT_V11Adapter
 # You can pass some keyword args config to init function
 nonebot.init()
 nonebot.load_plugins("src/plugins")
-nonebot.load_plugin("nonebot_plugin_heisi")
-nonebot.load_plugin("nonebot_plugin_remake")
-nonebot.load_plugin("nonebot_plugin_antiflash")
-nonebot.load_plugin("nonebot_plugin_randomtkk")
+# nonebot.load_plugin("nonebot_plugin_heisi")
+# nonebot.load_plugin("nonebot_plugin_remake")
+# nonebot.load_plugin("nonebot_plugin_antiflash")
+# nonebot.load_plugin("nonebot_plugin_randomtkk")
 # nonebot.load_plugin("nonebot_plugin_boardgame")
 app = nonebot.get_asgi()
 

@@ -1,0 +1,17 @@
+nonebot_plugin_boardgame-0.1.1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+nonebot_plugin_boardgame-0.1.1.dist-info/METADATA,sha256=zo7AcsBRLJ2cxGBAaHfMhrCJbJDw9GpR4G31dYL0AVo,2502
+nonebot_plugin_boardgame-0.1.1.dist-info/RECORD,,
+nonebot_plugin_boardgame-0.1.1.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nonebot_plugin_boardgame-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+nonebot_plugin_boardgame/__init__.py,sha256=Yp2rQq-IuORuAi7I6OZv18X3m0S5mU3ID7Izas2Qfnw,9656
+nonebot_plugin_boardgame/__pycache__/__init__.cpython-310.pyc,,
+nonebot_plugin_boardgame/__pycache__/game.cpython-310.pyc,,
+nonebot_plugin_boardgame/__pycache__/go.cpython-310.pyc,,
+nonebot_plugin_boardgame/__pycache__/gomoku.cpython-310.pyc,,
+nonebot_plugin_boardgame/__pycache__/othello.cpython-310.pyc,,
+nonebot_plugin_boardgame/__pycache__/svg.cpython-310.pyc,,
+nonebot_plugin_boardgame/game.py,sha256=H_r24kdiO9FIlUaNkJf0A3MAPCWZ-IEtGko75Lh6KGk,7457
+nonebot_plugin_boardgame/go.py,sha256=JyK7BcBSVg9QKzKY_CmlppNiEBum0QoPfzk8JY6M7fw,2078
+nonebot_plugin_boardgame/gomoku.py,sha256=Ricq4IdKF1uOVTCpQADcsJGJGmp4YN57fTctN95feMU,1951
+nonebot_plugin_boardgame/othello.py,sha256=fGwU9ZO3VwzSmr6NWa33NufmRsmC3flHsrs2gOiL9Ts,2423
+nonebot_plugin_boardgame/svg.py,sha256=XPw6aw2LpbQHxrpl_qmoKOh-YvfWsVK5ZEiN4UokC3Q,3635
