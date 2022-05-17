@@ -1,0 +1,38 @@
+{
+    "congruence": {
+        "0": {},
+        "970353786": {
+            "[CQ:at,qq=2390934056] ": [
+                "[CQ:at,qq=653211616]"
+            ],
+            "[CQ:at,qq=653211616] ": [
+                "[CQ:at,qq=2390934056]"
+            ]
+        },
+        "328170849": {
+            " 你是谁 ": [
+                " 我是机器人立华奏"
+            ],
+            "主人": [
+                "我主人是摸你傻",
+                "我主人是摸你傻"
+            ],
+            "我是谁": [
+                "魔理沙"
+            ]
+        }
+    },
+    "include": {
+        "0": {
+            "[CQ:at,qq=653211616] pip如何升级": [
+                "python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple/\r\n或者pip install --user -- upgrade pip"
+            ],
+            "[CQ:at,qq=653211616] PIL": [
+                "pip3 install pillow\r\n安装"
+            ]
+        }
+    },
+    "regex": {
+        "0": {}
+    }
+}
