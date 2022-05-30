@@ -16,7 +16,7 @@ reply_type = "random"
 
 export().word_bank = wb
 
-wb_matcher = on_message(priority=99)
+wb_matcher = on_message(priority=90)
 
 
 @wb_matcher.handle()

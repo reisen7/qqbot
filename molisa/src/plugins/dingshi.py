@@ -5,18 +5,18 @@ import requests
 scheduler = require('nonebot_plugin_apscheduler').scheduler
 
 
-@scheduler.scheduled_job('cron', minute='*/20', id='sleep1')
-async def co():
-    # d = time.strftime("%m-%d %H:%M:%S", time.localtime())
-    url = 'http://api.ymong.top/api/cos.php'
-    da = requests.get(url).text
-    tu = f"[CQ:image,file={da}]"
-
-    bot = nonebot.get_bots()['328170849']
-    return await bot.call_api('send_group_msg', **{
-        'message': '{}'.format(tu),
-        'group_id': '695392621'
-    })
+# @scheduler.scheduled_job('cron', minute='*/20', id='sleep1')
+# async def co():
+#     # d = time.strftime("%m-%d %H:%M:%S", time.localtime())
+#     url = 'http://api.ymong.top/api/cos.php'
+#     da = requests.get(url).text
+#     tu = f"[CQ:image,file={da}]"
+#
+#     bot = nonebot.get_bots()['328170849']
+#     return await bot.call_api('send_group_msg', **{
+#         'message': '{}'.format(tu),
+#         'group_id': '695392621'
+#     })
 
 @scheduler.scheduled_job('cron', minute='*/50', id='sleep')
 async def w():

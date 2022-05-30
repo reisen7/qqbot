@@ -6,9 +6,9 @@ from random import choice
 
 from nonebot.typing import T_State
 
-poke = on_notice(rule=to_me())
-recall = on_notice()
-flashimg = on_message()
+poke = on_notice(rule=to_me(),priority=99)
+recall = on_notice(priority=99)
+# flashimg = on_message()
 
 
 # 群聊

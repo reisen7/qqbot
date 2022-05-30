@@ -12,23 +12,27 @@ import json
 
 from nonebot.typing import T_State
 
-liaotian=on_command('AI聊天', rule=to_me(), priority=-1)
+liaotian=on_command('', rule=to_me(), priority=20)
+
 
 @liaotian.handle()
-async def handle_first_receive(matcher: Matcher, args: Message = CommandArg()):
-    plain_text = args.extract_plain_text()  # 首次发送命令时跟随的参数，例：/天气 上海，则args为上海
-    if plain_text:
-        matcher.set_arg("city", args)  # 如果用户发送了参数则直接赋值
+async def handle_first_receive(matcher: Matcher,event: Event):
+      # 首次发送命令时跟随的参数，例：/天气 上海，则args为上海
+
+    message=str(event.get_message()).strip()
+    print(message)
+    word=await chat(message)
+    await liaotian.send(message=word)
 
 
-@liaotian.got("city", prompt="你想跟我聊什么呢😊")
-async def handle_city(city: Message = Arg(), city_name: str = ArgPlainText("city")):
-    if city_name == '关闭聊天':
-        await liaotian.finish('下次继续聊哦')
-    city1=await chat(city)
-    # await liaotian.send(message=city)
-    await liaotian.send(message=city1)
-    await liaotian.reject()
+# @liaotian.got("city", prompt="你想跟我聊什么呢😊")
+# async def handle_city(city: Message = Arg(), city_name: str = ArgPlainText("city")):
+#     if city_name == '关闭聊天':
+#         await liaotian.finish('下次继续聊哦')
+#     city1=await chat(city)
+#     # await liaotian.send(message=city)
+#     await liaotian.send(message=city1)
+#     await liaotian.reject()
 
 # async def chat(city: str):
 #     cityname = city
@@ -41,10 +45,10 @@ async def handle_city(city: Message = Arg(), city_name: str = ArgPlainText("city
 
 async def chat(city:str):
     cityname = city
-    url='https://api.ownthink.com/bot?appid=xiaosi&userid=user&spoken='+cityname
+    url='http://api.qingyunke.com/api.php?key=free&appid=0&msg='+cityname
     proxies = {"http": None, "https": None}
     answer = requests.get(url, verify=False, proxies=proxies).json()
-    a = answer['data']['info']['text']
+    a = answer['content']
     return str(a)
 
 

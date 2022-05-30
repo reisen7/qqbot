@@ -209,7 +209,7 @@ async def handle_first_receive(bot: Bot, event: GroupAdminNoticeEvent, state: T_
 
 
 # 单人禁言
-ban = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', '卧槽', '嘛的', '操你妈', '操你', '加vx', '草'})
+ban = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', '卧槽', '嘛的', '操你妈', '操你', '加vx', '草'}, priority=60)
 
 
 @ban.handle()
@@ -226,7 +226,7 @@ async def b(bot: Bot, event: GroupMessageEvent, state: T_State):
 
 
 # 匿名禁言
-nban = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', '卧槽', '嘛的', '你妈', '操你', '加vx','操'})
+nban = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', '卧槽', '嘛的', '你妈', '操你', '加vx','操'}, priority=60)
 
 
 @nban.handle()
@@ -243,7 +243,7 @@ async def n(bot: Bot, event: GroupMessageEvent, state: T_State):
 
 
 # 撤回消息
-che = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', '卧槽', '嘛的', '操你妈', '操你', '加vx','操','草'})
+che = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', '卧槽', '嘛的', '操你妈', '操你', '加vx','操','草'} ,priority=60)
 
 
 @che.handle()
@@ -253,17 +253,17 @@ async def c(bot: Bot, event: GroupMessageEvent, state: T_State):
     await bot.delete_msg(message_id=mid)
 
 
-# 踢人
-ti = on_keyword({'加vx'})
-@ti.handle()
-async def c(bot: Bot, event: GroupMessageEvent, state: T_State):
-    gid = event.group_id
-    uid = event.user_id
-    sid=event.self_id
-    await bot.set_group_kick(group_id=gid, user_id=uid,self_id=sid)
+# # 踢人
+# ti = on_keyword({'加vx'})
+# @ti.handle()
+# async def c(bot: Bot, event: GroupMessageEvent, state: T_State):
+#     gid = event.group_id
+#     uid = event.user_id
+#     sid=event.self_id
+#     await bot.set_group_kick(group_id=gid, user_id=uid,self_id=sid)
 
 
-shu = on_keyword({'头衔'})
+shu = on_keyword({'头衔'},priority=60)
 
 @shu.handle()
 async def s(bot: Bot, event: GroupMessageEvent, state: T_State):
@@ -295,7 +295,8 @@ async def s(bot: Bot, event: GroupMessageEvent, state: T_State):
     await vip.send('现在已经取消禁言了哦，大家在群里文明聊天哦')
     await bot.set_group_whole_ban(group_id=gid, enable=False)
 
-dian=on_keyword({'垃圾','广告','傻逼','草','cao','操'})
+
+dian=on_keyword({'垃圾','广告','傻逼','草','cao','操'},priority=60)
 @dian.handle()
 async def h(bot: Bot, event: GroupMessageEvent):
     mid=event.message_id
@@ -305,7 +306,7 @@ async def h(bot: Bot, event: GroupMessageEvent):
     await bot.delete_msg(message_id=mid)
     await bot.send_msg(user_id=uid,message=msg,group_id=gid)
 
-dian=on_keyword({'帅哥','群主最帅','群主最美','群主最棒','我爱张杰'})
+dian=on_keyword({'帅哥','群主最帅','群主最美','群主最棒','我爱张杰'},priority=60)
 @dian.handle()
 async def h(bot: Bot, event: GroupMessageEvent):
     mid=event.message_id
@@ -351,7 +352,7 @@ async def j(bot:Bot,event:GroupMessageEvent):
     gi='群号：'+str(d.get('group_id'))
     await t.send(message=str(fc+'\n'+lc+'\n'+us+'\n'+ts+'\n'+gi))
 
-t=on_keyword({'龙王'})
+t=on_keyword({'龙王'},priority=60)
 @t.handle()
 async def j(bot:Bot,event:GroupMessageEvent):
     gid=event.group_id
