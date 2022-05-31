@@ -22,7 +22,11 @@ async def handle_first_receive(matcher: Matcher,event: Event):
     message=str(event.get_message()).strip()
     print(message)
     word=await chat(message)
-    await liaotian.send(message=word)
+    if '{face:' in word:
+        yuju=word.split('}')
+        face=yuju[0].split(':')[1]
+        word = "[CQ:face,id={}]{}".format(face, yuju[1])
+    await liaotian.send(message=Message(word))
 
 
 # @liaotian.got("city", prompt="你想跟我聊什么呢😊")

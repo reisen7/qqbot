@@ -14,8 +14,12 @@ from nonebot.adapters.onebot.v11 import Adapter as ONEBOT_V11Adapter
 #            format=default_format)
 
 # You can pass some keyword args config to init function
-nonebot.init()
+nonebot.init(apscheduler_autostart=True)
+nonebot.init(apscheduler_config={
+    "apscheduler.timezone": "Asia/Shanghai"
+})
 nonebot.load_plugins("src/plugins")
+
 # nonebot.load_plugin("nonebot_plugin_heisi")
 # nonebot.load_plugin("nonebot_plugin_remake")
 # nonebot.load_plugin("nonebot_plugin_antiflash")

@@ -39,13 +39,17 @@ async def qian():
     return tu
 
 
-yulu = on_command('cos1',aliases={"烧鸡"}, rule=to_me())
+yulu = on_command('cos',aliases={"烧鸡","美少女"}, rule=to_me())
 
 
 @yulu.handle()
 async def j(bot: Bot, event: Event, state: T_State):
-    msg = await mei()
-    print(msg)
+
+    a=random.randint(0,1)
+    if a==1:
+        msg = await mei()
+    if a==0:
+        msg = await heisi()
     try:
         await yulu.send(Message(msg))
 
@@ -63,20 +67,6 @@ async def mei():
     # test = y[3].replace("\\", "")
     tu = f"[CQ:image,file={resp}]"
     return tu
-
-
-yulu = on_command('cos2', rule=to_me())
-
-
-@yulu.handle()
-async def j(bot: Bot, event: Event, state: T_State):
-    msg = await heisi()
-    print(msg)
-    try:
-        await yulu.send(Message(msg))
-
-    except CQHttpError:
-        pass
 
 
 async def heisi():
