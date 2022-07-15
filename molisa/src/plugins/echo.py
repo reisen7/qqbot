@@ -8,4 +8,5 @@ echo = on_command("echo", to_me())
 
 @echo.handle()
 async def echo_escape(message: Message = CommandArg()):
-    await echo.send(message=message)
+    print(message)
+    await echo.send(message=Message(message))

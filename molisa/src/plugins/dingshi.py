@@ -57,7 +57,7 @@ scheduler = require('nonebot_plugin_apscheduler').scheduler
 #     })
 
 
-@scheduler.scheduled_job('cron', hour='*/2', id='sleep2')
+@scheduler.scheduled_job('cron', hour='*/12', id='sleep2')
 async def f():
     header = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36',

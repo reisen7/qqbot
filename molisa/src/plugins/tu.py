@@ -39,7 +39,7 @@ async def qian():
     return tu
 
 
-yulu = on_command('cos',aliases={"烧鸡","美少女"}, rule=to_me())
+yulu = on_command('cos',aliases={"烧鸡", "美少女", "涩图", "色图"}, rule=to_me())
 
 
 @yulu.handle()
