@@ -49,9 +49,9 @@ class RandomTkkHandler:
             计算等待时间
         '''
         if tkk_size >= 30:
-            time = int(0.1 * (tkk_size - 30)**2 + 50)
+            time = int(0.1 * (tkk_size - 30)**2 + 80)
         else:
-            time = int(1.7 * (tkk_size - 10) + 15)
+            time = int(1.7 * (tkk_size - 10) + 40)
         
         return time
     

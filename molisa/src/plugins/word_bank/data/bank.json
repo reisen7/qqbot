@@ -31,6 +31,13 @@
             ],
             "艾特全体成员": [
                 "[CQ:at,qq=all]"
+            ],
+            "包子皇": [
+                "[CQ:image,file=f4423c7014f6135a7230a6222c7501fc.image,subType=0]",
+                "[CQ:image,file=ee235026545d304fbdbca34795e0eb9c.image,subType=0]"
+            ],
+            "Aqours": [
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1963764755]"
             ]
         },
         "993105896": {
@@ -50,16 +57,46 @@
                 "[CQ:image,file=672526da32c8ed606e006d8075b31dff.image,subType=0]"
             ],
             "你主人的头像": [
-                "\r\n[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,subType=0]"
-            ],
-            "包子皇": [
-                "[CQ:image,file=f4423c7014f6135a7230a6222c7501fc.image,subType=0]"
+                "[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,subType=0]"
             ],
             "艾特高丸": [
                 "&#91;CQ:at,qq=2941477358&#93;"
             ],
             "经典摸你傻是谁": [
                 "是我的主人捏~我每天都帮他口"
+            ],
+            "七海娜娜米": [
+                "我是七海挪挪米的粉丝"
+            ],
+            "台湾": [
+                "台湾犊栗[CQ:image,file=361d3e62bb642e8158be833e665eb0c4.image,subType=0]"
+            ],
+            "冷彦均": [
+                "[CQ:image,file=a84667ecdfc69e34804b6fc9baa6f7c2.image,subType=0]",
+                "[CQ:image,file=ef38a9f13d241ddaa7ca0320627fa540.image,subType=0]"
+            ],
+            "欧布": [
+                "[CQ:image,file=c305b7d7e0e1d6f214b914df4d8e2255.image,subType=0]"
+            ],
+            "V我50": [
+                "[CQ:image,file=d97199a8861222b1eae018137a24a2fa.image,subType=0]"
+            ],
+            "王高石": [
+                "[CQ:image,file=b2ce1c2c30fa43d02a36d9775cae9b8b.image,subType=0]"
+            ],
+            "王高品": [
+                "[CQ:image,file=a9e17acf5538da562fd76db9078c8c53.image,subType=0]"
+            ],
+            "龙图": [
+                "[CQ:image,file=654715c3f2f8a141621a8cb95a895fb8.image,subType=0]",
+                "[CQ:image,file=05223a74e3f1b9c431b89dbdf225a6f2.image,subType=0]",
+                "[CQ:image,file=a9e17acf5538da562fd76db9078c8c53.image,subType=0]",
+                "[CQ:image,file=b5c475445df8647f41470328a869e740.image,subType=1]",
+                "[CQ:image,file=b5081fc75a41b3d5961f89646f5fe285.image,subType=1]",
+                "[CQ:image,file=d1b56865141cf8e75f18e53a39d298dc.image,subType=1]",
+                "[CQ:image,file=c2592961538f026f5a107d15182798be.image,subType=1]",
+                "[CQ:image,file=4e7a1fc811054810a0b8e8d0b0311759.image,subType=1]",
+                "[CQ:image,file=ab071a750d94d8dab296823a05f926d6.image,subType=1]"
             ]
         },
         "1062564756": {
@@ -80,6 +117,9 @@
             ],
             "你的主人是谁": [
                 "我的主人是魔理沙"
+            ],
+            "Aqours": [
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1963764755]"
             ]
         }
     },

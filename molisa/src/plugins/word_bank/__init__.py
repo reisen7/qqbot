@@ -70,7 +70,8 @@ async def _(bot: Bot, event: MessageEvent):
                 word = "[CQ:face,id={}]{}".format(face, yuju[1])
             word = word.replace('菲菲', '小奏')
             word = word.replace('雪梅', '魔理沙')
-            await bot.send(event, message=word)
+            word = word.replace('小菲', '小奏')
+            await bot.send(event, message=Message(word))
 
 
 wb_set_cmd = on_regex(r"^(?:全局|模糊|正则)*问", permission=SUPERUSER | GROUP_OWNER | GROUP_ADMIN | PRIVATE_FRIEND | GROUP_MEMBER, )

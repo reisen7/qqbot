@@ -12,7 +12,14 @@ async def h_r(bot: Bot, event: Event, state: T_State):
     args = str(event.get_message()).strip()
     if args:
         state["city"] = args
-        msg = """(！！！以下命令需要艾特我才能执行)所有命令:人生重开，随机唐可可，今日人品，历史今天，今日哔哩哔哩排行，成语查询，每日一句，翻译，ip，二次元，美图，原神，美女，黑丝，cos, 搜图"""
+        msg = """(！！！以下命令需要艾特我才能执行)
+        所有命令:
+        烧鸡, cos, 搜图, 象棋, 棋类游戏
+        翻译，ip，二次元，美图，原神，美女，黑丝
+        人生重开,随机唐可可,今日人品,历史今天
+        今日哔哩哔哩排行,成语查询,每日一句
+        问答调教 （格式：问xx答xx）
+        """
         id = str(event.get_user_id())
         # yuyin=f"[CQ:record,file=http://baidu.com/1.mp3]"
         # biaoqing=f"[CQ:face,id=123]"#表情包使
