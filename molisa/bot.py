@@ -25,7 +25,10 @@ nonebot.load_plugins("src/plugins")
 # nonebot.load_plugin("nonebot_plugin_remake")
 # nonebot.load_plugin("nonebot_plugin_antiflash")
 # nonebot.load_plugin("nonebot_plugin_randomtkk")
-# nonebot.load_plugin("nonebot_plugin_boardgame")
+nonebot.load_plugin("nonebot_plugin_htmlrender")
+nonebot.load_plugin("nonebot_plugin_boardgame")
+nonebot.load_plugin("nonebot_plugin_cchess")
+
 app = nonebot.get_asgi()
 
 driver = nonebot.get_driver()

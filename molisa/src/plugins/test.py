@@ -20,7 +20,7 @@ async def get_hello():
     return '你好'
 
 
-who = on_keyword({'你是','谁','名字','叫什么'}, rule=to_me())
+who = on_keyword({'你是'}, rule=to_me())
 
 
 @who.handle()

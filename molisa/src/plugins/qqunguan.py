@@ -209,7 +209,7 @@ async def handle_first_receive(bot: Bot, event: GroupAdminNoticeEvent, state: T_
 
 
 # 单人禁言
-ban = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', '卧槽', '嘛的', '操你妈', '操你', '加vx', '草'}, priority=60)
+ban = on_keyword({'广告', '沙雕', '广告', 'md'}, priority=60)
 
 
 @ban.handle()
@@ -226,7 +226,7 @@ async def b(bot: Bot, event: GroupMessageEvent, state: T_State):
 
 
 # 匿名禁言
-nban = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', '卧槽', '嘛的', '你妈', '操你', '加vx','操'}, priority=60)
+nban = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', }, priority=60)
 
 
 @nban.handle()
@@ -243,7 +243,7 @@ async def n(bot: Bot, event: GroupMessageEvent, state: T_State):
 
 
 # 撤回消息
-che = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', '卧槽', '嘛的', '操你妈', '操你', '加vx','操','草'} ,priority=60)
+che = on_keyword({'广告', '沙雕', '广告', 'md', '妈的',  '操你妈', '操你',} ,priority=60)
 
 
 @che.handle()

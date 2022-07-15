@@ -29,41 +29,48 @@ async def _(bot: Bot, event: MessageEvent):
 
     message = str(event.get_message()).strip()
     print(message)
-    msgs = wb.match(index, unescape(message))
-    if msgs:
-        if reply_type == 'random':
-            msg = Message(unescape(parse(msg=random.choice(msgs),
-                                         nickname=event.sender.card or event.sender.nickname,
-                                         sender_id=event.sender.user_id)))
-            await bot.send(event, message=msg)
 
-        else:
-            for msg in msgs:
-                await bot.send(event,
-                               message=Message(
-                                   unescape(
-                                       parse(msg=msg,
-                                             nickname=event.sender.card or event.sender.nickname,
-                                             sender_id=event.sender.user_id)
-                                   )
-                               )
-                               )
+    if message == '':
+        gun = '小奏在哟~'
+        await bot.send(event, message=gun)
     else:
-        # words = response(message)
-        # print(words)
-        cityname = message
-        url = 'http://api.qingyunke.com/api.php?key=free&appid=0&msg=' + cityname
-        proxies = {"http": None, "https": None}
-        answer = requests.get(url, verify=False, proxies=proxies).json()
-        a = answer['content']
-        word = str(a)
-        print(word)
-        if '{face:' in word:
-            yuju = word.split('}')
-            face = yuju[0].split(':')[1]
-            word = "[CQ:face,id={}]{}".format(face, yuju[1])
+        msgs = wb.match(index, unescape(message))
+        if msgs:
+            if reply_type == 'random':
+                msg = Message(unescape(parse(msg=random.choice(msgs),
+                                             nickname=event.sender.card or event.sender.nickname,
+                                             sender_id=event.sender.user_id)))
+                print(msg)
+                await bot.send(event, message=msg)
 
-        await bot.send(event, message=word)
+            else:
+                for msg in msgs:
+                    await bot.send(event,
+                                   message=Message(
+                                       unescape(
+                                           parse(msg=msg,
+                                                 nickname=event.sender.card or event.sender.nickname,
+                                                 sender_id=event.sender.user_id)
+                                       )
+                                   )
+                                   )
+        else:
+            # words = response(message)
+            # print(words)
+            cityname = message
+            url = 'http://api.qingyunke.com/api.php?key=free&appid=0&msg=' + cityname
+            proxies = {"http": None, "https": None}
+            answer = requests.get(url, verify=False, proxies=proxies).json()
+            a = answer['content']
+            word = str(a)
+            print(word)
+            if '{face:' in word:
+                yuju = word.split('}')
+                face = yuju[0].split(':')[1]
+                word = "[CQ:face,id={}]{}".format(face, yuju[1])
+            word = word.replace('菲菲', '小奏')
+            word = word.replace('雪梅', '魔理沙')
+            await bot.send(event, message=word)
 
 
 wb_set_cmd = on_regex(r"^(?:全局|模糊|正则)*问", permission=SUPERUSER | GROUP_OWNER | GROUP_ADMIN | PRIVATE_FRIEND | GROUP_MEMBER, )

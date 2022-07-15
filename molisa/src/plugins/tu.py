@@ -148,7 +148,7 @@ async def rousi():
     return tu
 
 
-yulu = on_command('白丝',priority=0)
+yulu = on_command('白丝', priority=0)
 
 
 @yulu.handle()
