@@ -18,6 +18,7 @@ nonebot.init(apscheduler_autostart=True)
 nonebot.init(apscheduler_config={
     "apscheduler.timezone": "Asia/Shanghai"
 })
+
 nonebot.load_plugins("src/plugins")
 
 # nonebot.load_plugin("nonebot_plugin_heisi")

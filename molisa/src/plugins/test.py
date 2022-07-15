@@ -1,7 +1,7 @@
 from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Event
-from nonebot import on_command
+from nonebot import on_command, on_keyword
 from nonebot.adapters.onebot.v11 import Bot
 
 test = on_command('你好', rule=to_me(), priority=0)
@@ -20,7 +20,7 @@ async def get_hello():
     return '你好'
 
 
-who = on_command('你是', rule=to_me(), priority=0)
+who = on_keyword({'你是','谁','名字','叫什么'}, rule=to_me())
 
 
 @who.handle()
@@ -33,7 +33,7 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
 
 
 async def get_weather():
-    return '我是机器人立华奏'
+    return '我是小奏'
 
 
 wanan = on_command("晚安")

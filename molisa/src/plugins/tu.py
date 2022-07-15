@@ -24,7 +24,7 @@ async def j(bot: Bot, event: Event, state: T_State):
         await yulu.send(Message(msg))
 
     except CQHttpError:
-        pass
+        await yulu.send("发送失败，请再试一次")
 
 
 async def qian():
@@ -54,18 +54,24 @@ async def j(bot: Bot, event: Event, state: T_State):
         await yulu.send(Message(msg))
 
     except CQHttpError:
-        pass
+        await yulu.send("发送失败，请再试一次")
 
 
 async def mei():
     url = 'https://imgapi.cn/cos.php?return=url'
     proxies = {"http": None, "https": None}
-    resp = requests.get(url=url, verify=False, proxies=proxies).url
+    try:
+        resp = requests.get(url=url, verify=False, proxies=proxies).url
+        tu = f"[CQ:image,file={resp}]"
+
+    except BaseException:
+        tu = '现在暂时没有烧鸡呢~请稍后再试'
+
     # x = resp.split(',')
     # y = x[1].split('"')
     # # test = resp['imgurl']
     # test = y[3].replace("\\", "")
-    tu = f"[CQ:image,file={resp}]"
+
     return tu
 
 

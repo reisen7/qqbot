@@ -1,7 +1,8 @@
 import random
-
+import requests
 from nonebot import on_command, on_message, on_regex, export
 from nonebot.permission import SUPERUSER
+from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters.onebot.v11.bot import Bot
 from nonebot.adapters.onebot.v11.message import Message
@@ -16,7 +17,7 @@ reply_type = "random"
 
 export().word_bank = wb
 
-wb_matcher = on_message(priority=90)
+wb_matcher = on_command('', rule=to_me(), priority=20)
 
 
 @wb_matcher.handle()
@@ -26,7 +27,9 @@ async def _(bot: Bot, event: MessageEvent):
     else:
         index = event.user_id
 
-    msgs = wb.match(index, unescape(event.raw_message))
+    message = str(event.get_message()).strip()
+    print(message)
+    msgs = wb.match(index, unescape(message))
     if msgs:
         if reply_type == 'random':
             msg = Message(unescape(parse(msg=random.choice(msgs),
@@ -45,6 +48,22 @@ async def _(bot: Bot, event: MessageEvent):
                                    )
                                )
                                )
+    else:
+        # words = response(message)
+        # print(words)
+        cityname = message
+        url = 'http://api.qingyunke.com/api.php?key=free&appid=0&msg=' + cityname
+        proxies = {"http": None, "https": None}
+        answer = requests.get(url, verify=False, proxies=proxies).json()
+        a = answer['content']
+        word = str(a)
+        print(word)
+        if '{face:' in word:
+            yuju = word.split('}')
+            face = yuju[0].split(':')[1]
+            word = "[CQ:face,id={}]{}".format(face, yuju[1])
+
+        await bot.send(event, message=word)
 
 
 wb_set_cmd = on_regex(r"^(?:全局|模糊|正则)*问", permission=SUPERUSER | GROUP_OWNER | GROUP_ADMIN | PRIVATE_FRIEND | GROUP_MEMBER, )
