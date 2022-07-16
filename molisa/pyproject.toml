@@ -13,7 +13,7 @@ nonebot2 = "^2.0.0-beta.1"
 nb-cli = "^0.6.0"
 
 [tool.nonebot]
-plugins = ["nonebot_plugin_apscheduler", "nonebot_plugin_remake", "nonebot_plugin_boardgame", "nonebot_plugin_antiflash", "nonebot_plugin_color", "nonebot_plugin_randomtkk", "nonebot_plugin_pixiv", "leetcode"]
+plugins = ["nonebot_plugin_apscheduler", "nonebot_plugin_remake", "nonebot_plugin_boardgame", "nonebot_plugin_antiflash", "nonebot_plugin_color", "nonebot_plugin_randomtkk", "nonebot_plugin_pixiv", "leetcode", "nonebot_plugin_dailysign"]
 plugin_dirs = ["src/plugins"]
 
 [build-system]

@@ -9,16 +9,41 @@ import requests
 from nonebot.plugin import on_command
 from aiocqhttp.exceptions import Error as CQHttpError
 from nonebot.rule import to_me
+from .ConfigSql import OperationMysql
+
 da = on_command('原神',rule=to_me(),aliases={"原神烧鸡","原批", "genshin"})
 
 @da.handle()
 async def h(bot: Bot, event: Event, state: T_State):
-    msg = await se()
-    try:
-        await da.send(Message(msg))
 
-    except CQHttpError:
-        pass
+    user_qq = event.get_user_id()
+    sql = 'select * from sign where user_qq = '
+    # logger.info(sql+user_qq)
+    sql_select = sql+user_qq
+
+    op_mysql = OperationMysql()
+    user = op_mysql.search_one(sql_select)
+
+    if user:
+        if user['integral'] == 0:
+            await da.send(Message('你的金币不足哦~快向小奏签到获取吧'))
+
+        else:
+
+            try:
+                sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
+                    user_qq)
+
+                op_mysql = OperationMysql()
+                op_mysql.updata_one(sql_update)
+                msg = await se()
+                await da.send(Message(msg))
+
+            except CQHttpError:
+                await da.send(Message('现在暂时没有图片哦~'))
+
+    else:
+        await da.send(Message('你的金币不足哦~快向小奏签到获取吧'))
 
 
 class WebSpider(object):

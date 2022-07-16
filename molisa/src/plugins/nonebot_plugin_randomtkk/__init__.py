@@ -1,4 +1,4 @@
-from nonebot import on_command
+from nonebot import on_command, logger
 from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot.typing import T_State
 from nonebot.matcher import Matcher
@@ -6,14 +6,16 @@ from nonebot.adapters.onebot.v11 import Message, MessageSegment, GroupMessageEve
 from nonebot.params import Depends, CommandArg, State
 from nonebot.rule import Rule
 from .handler import random_tkk_handler
+from .MyBotSql import OperationMysql
 
+levels = None
 __randomtkk_vsrsion__ = "v0.1.1"
 __randomtkk_notes__ = f'''
 随机唐可可 {__randomtkk_vsrsion__}
 [随机唐可可]+[简单/普通/困难/地狱/自定义数量] 开启唐可可挑战
 不指定难度默认普通模式
 可替换为[随机鲤鱼/鲤鱼王/Liyuu/liyuu]
-答案格式：[行][空格][列]，例如：114 514
+答案格式：[答案是][行][空格][列]，例如：114 514
 [找不到唐可可/唐可可人呢/呼叫鲤鱼姐] 发起者可提前结束游戏
 '''.strip()
 
@@ -35,7 +37,7 @@ def starter_check(event: MessageEvent) -> bool:
     return random_tkk_handler.check_starter(gid, uid)
 
 random_tkk = on_command(cmd="随机唐可可", aliases={"随机鲤鱼", "随机鲤鱼王", "随机Liyuu", "随机liyuu"})
-guess_tkk = on_command(cmd="", rule=Rule(inplaying_check), block=True)
+guess_tkk = on_command(cmd="答案是", rule=Rule(inplaying_check), block=True)
 surrender_tkk = on_command(cmd="找不到唐可可", aliases={"唐可可人呢", "呼叫鲤鱼姐"}, rule=Rule(starter_check), block=True)
  
 @random_tkk.handle()
@@ -55,10 +57,13 @@ async def _(matcher: Matcher, event: MessageEvent, args: Message = CommandArg())
     if not args:
         await matcher.send("未指定难度，默认普通模式")
         level = "普通"
+        global levels
+        levels = level
     elif args and len(args) == 1: 
         if args[0] == "帮助":
             await matcher.finish(__randomtkk_notes__)
         level = args[0]
+        levels = level
     else:
         await matcher.finish("参数太多啦~")
     
@@ -70,7 +75,7 @@ async def _(matcher: Matcher, event: MessageEvent, args: Message = CommandArg())
     await matcher.send(MessageSegment.image(img_file))
     
     # 确保在此为send，超时回调内还需matcher.finish
-    await matcher.send(f"将在 {waiting}s 后公布答案\n答案格式：[行][空格][列]\n例如：114 514\n提前结束游戏请发起者输入[找不到唐可可/唐可可人呢]")
+    await matcher.send(f"将在 {waiting}s 后公布答案\n答案格式：[答案是][行][空格][列]\n例如：114 514\n提前结束游戏请发起者输入[找不到唐可可/唐可可人呢]")
 
 async def get_user_guess(args: Message = CommandArg(), state: T_State = State()):
     args = args.extract_plain_text().strip().split()
@@ -95,7 +100,25 @@ async def _(event: MessageEvent, state: T_State = Depends(get_user_guess)):
         if random_tkk_handler.check_answer(gid, pos):
             if not random_tkk_handler.binggo_close_game(gid):
                 await guess_tkk.finish("结束游戏出错……")
-            await guess_tkk.finish("答对啦，好厉害！", at_sender=True)
+
+            sql = 'select * from sign where user_qq = '
+            # logger.info(sql+user_qq)
+            sql_select = sql + str(event.user_id)
+
+            op_mysql = OperationMysql()
+            user = op_mysql.search_one(sql_select)
+            if user:
+                size = random_tkk_handler.config_tkk_size(level=levels)
+                sql_update = 'update sign set  integral = integral +' + str(size / 10) + ' where user_qq =' + str(
+                    event.user_id)
+                logger.info(sql_update)
+
+                op_mysql = OperationMysql()
+                op_mysql.updata_one(sql_update)
+                size = int(size/10)
+                await guess_tkk.finish("答对啦，好厉害！" + '金币 + ' + str(size), at_sender=True)
+            else:
+                await guess_tkk.finish("答对啦，好厉害！", at_sender=True)
         else:
             await guess_tkk.finish("不对哦~", at_sender=True)
     else:

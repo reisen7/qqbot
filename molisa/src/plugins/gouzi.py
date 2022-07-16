@@ -1,9 +1,7 @@
-import json
 
 import nonebot
 from nonebot import get_driver, logger
 from nonebot.adapters.onebot.v11.bot import Bot
-from nonebot.message import run_postprocessor
 
 driver = get_driver()
 start_group = nonebot.get_driver().config.start_group
@@ -18,8 +16,9 @@ async def do_something():
 
 @driver.on_bot_connect
 async def do_something(bot: Bot):
-    message = '已经连上了~'
+    message = '小奏正在启动哦~'
     global flag
     flag = True
-    str1 = start_group
+    str1 = 1062564756
+    # await bot.send_group_msg(group_id=str1, message=message, auto_escape=True)
 

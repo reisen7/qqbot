@@ -14,6 +14,7 @@ async def h_r(bot: Bot, event: Event, state: T_State):
         state["city"] = args
         msg = """(！！！以下命令需要艾特我才能执行)
         所有命令:
+        签到
         烧鸡,cos, 搜图, 象棋人机, 象棋对战, 五子棋, 围棋
         黑白棋, 翻译，ip，二次元，美图，原神，美女，黑丝
         人生重开,随机唐可可,今日人品,历史今天
