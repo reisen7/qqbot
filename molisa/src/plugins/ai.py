@@ -51,12 +51,12 @@
 #     return str(a)
 #
 #
-# # async def ch(city:str):
-# #     cityname = city
-# #     url='https://api.ownthink.com/bot?appid=65b18965ecfe378cd868f114690a95e2&userid=7PmXS0bj&spoken=%E7%8C%AA%E5%90%97'+cityname
-# #     answer = requests.get(url=url).json()
-# #     a = answer['data']['info']['text']
-# #     return str(a)
+# async def ch(city:str):
+#     cityname = city
+#     url='https://api.ownthink.com/bot?appid=65b18965ecfe378cd868f114690a95e2&userid=7PmXS0bj&spoken=%E7%8C%AA%E5%90%97'+cityname
+#     answer = requests.get(url=url).json()
+#     a = answer['data']['info']['text']
+#     return str(a)
 #
 # # liaotian=on_keyword({'ai'})
 # # @liaotian.handle()

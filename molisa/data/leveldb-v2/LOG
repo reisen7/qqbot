@@ -704,3 +704,66 @@
 21:36:32.470410 version@stat F·[2 1] S·1MiB[87KiB 1MiB] Sc·[0.50 0.01]
 21:36:32.518648 memdb@flush committed F·1 T·192.4119ms
 21:36:32.519058 journal@remove removed @188
+=============== Jul 15, 2022 (CST) ===============
+21:41:46.281377 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:41:46.290070 version@stat F·[2 1] S·1MiB[87KiB 1MiB] Sc·[0.50 0.01]
+21:41:46.290070 db@open opening
+21:41:46.290070 journal@recovery F·1
+21:41:46.290070 journal@recovery recovering @190
+21:41:46.409566 memdb@flush created L0@192 N·28 S·5KiB "#-\xfa\x87,v7154":"\xddi^\xec,v7171"
+21:41:46.409566 version@stat F·[3 1] S·1MiB[93KiB 1MiB] Sc·[0.75 0.01]
+21:41:46.508676 db@janitor F·6 G·0
+21:41:46.509281 db@open done T·219.2111ms
+22:24:08.077857 memdb@flush N·195 S·127KiB
+22:24:08.246407 memdb@flush created L0@196 N·195 S·41KiB "\x006\xd3\xce,v7183":"\xfdSGp,v7227"
+22:24:08.246407 version@stat F·[4 1] S·1MiB[135KiB 1MiB] Sc·[1.00 0.01]
+22:24:08.339436 memdb@flush committed F·1 T·261.579ms
+22:24:08.339532 journal@remove removed @193
+22:24:08.339532 table@compaction L0·4 -> L1·1 S·1MiB Q·7377
+22:24:08.433535 table@build created L1@197 N·6973 S·1MiB "\x00\x18\xe0\xa5,v162":"\xff\xfc\x83\xb2,v3647"
+22:24:08.433535 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.02]
+22:24:08.527075 table@compaction committed F-4 S+15KiB Ke·0 D·0 T·187.5424ms
+22:24:08.527418 table@remove removed @196
+22:24:08.527567 table@remove removed @192
+22:24:08.528156 table@remove removed @191
+22:24:08.528156 table@remove removed @189
+22:24:08.528741 table@remove removed @187
+=============== Jul 16, 2022 (CST) ===============
+07:55:26.945428 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+07:55:26.958381 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.02]
+07:55:26.958381 db@open opening
+07:55:26.958381 journal@recovery F·1
+07:55:26.958381 journal@recovery recovering @195
+07:55:27.069453 memdb@flush created L0@198 N·147 S·33KiB "\x03l\u007f\x87,v7509":"\xffˁ\x0e,v7408"
+07:55:27.069453 version@stat F·[1 1] S·1MiB[33KiB 1MiB] Sc·[0.25 0.02]
+07:55:27.279035 db@janitor F·4 G·0
+07:55:27.279035 db@open done T·320.6545ms
+10:09:44.869624 memdb@flush N·187 S·127KiB
+10:09:44.984890 memdb@flush created L0@202 N·187 S·44KiB "\x00\xdf\x14\xb1,v7639":"\xff\u007f\xea\xbe,v7536"
+10:09:44.984890 version@stat F·[2 1] S·1MiB[77KiB 1MiB] Sc·[0.50 0.02]
+10:09:45.032617 memdb@flush committed F·1 T·162.9928ms
+10:09:45.033791 journal@remove removed @199
+10:45:22.068815 memdb@flush N·199 S·127KiB
+10:45:22.184198 memdb@flush created L0@204 N·199 S·43KiB "\x01N\xad\x1b,v7732":"\xff\xed\xb1],v7747"
+10:45:22.184198 version@stat F·[3 1] S·1MiB[120KiB 1MiB] Sc·[0.75 0.02]
+10:45:22.233235 memdb@flush committed F·1 T·164.42ms
+10:45:22.233337 journal@remove removed @201
+11:09:06.559354 memdb@flush N·194 S·127KiB
+11:09:06.628343 memdb@flush created L0@206 N·194 S·44KiB "\x00\x10\xe3\x9d,v7957":"\xfe\xb3\xff\xdb,v7991"
+11:09:06.628343 version@stat F·[4 1] S·1MiB[165KiB 1MiB] Sc·[1.00 0.02]
+11:09:06.761709 memdb@flush committed F·1 T·202.2486ms
+11:09:06.761964 journal@remove removed @203
+11:09:06.762471 table@compaction L0·4 -> L1·1 S·1MiB Q·8105
+11:09:06.911120 table@build created L1@207 N·7677 S·1MiB "\x00\x10\xe3\x9d,v7957":"\xff\xfc\x83\xb2,v3647"
+11:09:06.911120 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.02]
+11:09:07.182658 table@compaction committed F-4 S+9KiB Ke·0 D·23 T·420.1875ms
+11:09:07.182787 table@remove removed @206
+11:09:07.182787 table@remove removed @204
+11:09:07.183369 table@remove removed @202
+11:09:07.183369 table@remove removed @198
+11:09:07.183899 table@remove removed @197
+11:36:19.466100 memdb@flush N·189 S·127KiB
+11:36:19.574219 memdb@flush created L0@209 N·189 S·41KiB "\x03\b\x13B,v8184":"\xff\xaf\xed\xcb,v8121"
+11:36:19.574321 version@stat F·[1 1] S·1MiB[41KiB 1MiB] Sc·[0.25 0.02]
+11:36:19.623134 memdb@flush committed F·1 T·157.0337ms
+11:36:19.623229 journal@remove removed @205

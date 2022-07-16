@@ -3,7 +3,7 @@
 account: # 账号相关
   uin: 1707906469 # QQ账号
   password: '' # 密码为空时使用扫码登录
-  encrypt: true  # 是否开启密码加密
+  encrypt: false  # 是否开启密码加密
   status: 0      # 在线状态 请参考 https://docs.go-cqhttp.org/guide/config.html#在线状态
   relogin: # 重连设置
     delay: 3   # 首次重连延迟, 单位秒
