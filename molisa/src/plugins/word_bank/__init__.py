@@ -1,8 +1,10 @@
 import random
+from datetime import datetime
+
 import requests
 from nonebot.internal.params import Arg, ArgPlainText
 from nonebot.matcher import Matcher
-from nonebot import on_command, on_message, on_regex, export
+from nonebot import on_command, on_message, on_regex, export, logger
 from nonebot.params import CommandArg, RegexMatched
 from nonebot.permission import SUPERUSER
 from nonebot.rule import to_me
@@ -12,10 +14,9 @@ from nonebot.adapters.onebot.v11.message import Message
 from nonebot.adapters.onebot.v11.event import MessageEvent, GroupMessageEvent
 from nonebot.adapters.onebot.v11.utils import unescape
 from nonebot.adapters.onebot.v11.permission import GROUP_OWNER, GROUP_ADMIN, PRIVATE_FRIEND,GROUP_MEMBER
-
 from .data_source import OPTIONS, word_bank as wb
 from .util import parse, parse_cmd
-
+from .MyBotSql import OperationMysql
 reply_type = "random"
 
 export().word_bank = wb
@@ -136,30 +137,137 @@ async def wb_set(matcher: Matcher, bot: Bot, event: MessageEvent, args: Message 
 
 @wb_set_cmd.got("city", prompt="你想让我回答什么")
 async def wb_response( bot: Bot, event: MessageEvent, city: Message = Arg()):
-    print(city)
-    print(word)
-    message = word+city
-    print(message)
 
-    if isinstance(event, GroupMessageEvent):
-        index = event.group_id
+
+
+    flag = False  # 判断是否合法TRUE表示违法
+    isImg = False
+    isText = False
+    city = str(city).replace("\n", '').replace("\r", '')
+    if 'CQ:image' in str(city):
+        isImg = True
+        access_t = await accessisUse()
+        flag = await isHEfa(city, access_t)
+
+    if not('[' in city and ']' in city):
+        isText = True
+        access_t = await accessisUse()
+        w = await testisHEFA(city=city, access_t=access_t)
+        if w == '不合规':
+            flag = True
+
+    if flag == True and isImg == True:
+        await bot.send(event, message='图片违规,请重新发送')
+    elif flag == True and  isText ==True:
+        await bot.send(event, message='文本违规,请重新发送')
+    elif flag ==False and isImg ==False and isText ==False:
+        await bot.send(event, message='暂不支持这种格式哦，请联系我主人')
     else:
-        index = event.user_id
+        message = word + city
+        print(message)
 
-    msg = str(message)
+        if isinstance(event, GroupMessageEvent):
+            index = event.group_id
+        else:
+            index = event.user_id
 
-    kv = parse_cmd(r"([模糊全局正则]*)问(.+?)答(.+)", msg)
+        msg = str(message)
 
-    if kv:
-        flag, key, value = kv[0]
-        type_ = 3 if '正则' in flag else 2 if '模糊' in flag else 1
+        kv = parse_cmd(r"([模糊全局正则]*)问(.+?)答(.+)", msg)
 
-        res = wb.set(0 if '全局' in flag else index,
-                     unescape(key),
-                     value,
-                     type_)
-        if res:
-            await bot.send(event, message='我记住了~')
+        if kv:
+            flag, key, value = kv[0]
+            type_ = 3 if '正则' in flag else 2 if '模糊' in flag else 1
+
+            res = wb.set(0 if '全局' in flag else index,
+                         unescape(key),
+                         value,
+                         type_)
+            if res:
+                await bot.send(event, message='我记住了~')
+
+
+async def testisHEFA(city: str, access_t: str):
+    request_url = "https://aip.baidubce.com/rest/2.0/solution/v1/text_censor/v2/user_defined"
+
+    params = {"text": city}
+    access_token = access_t
+    request_url = request_url + "?access_token=" + access_token
+    headers = {'content-type': 'application/x-www-form-urlencoded'}
+    print(headers)
+    response = requests.post(request_url, data=params, headers=headers)
+    if response:
+        print(response.json())
+        return response.json()['conclusion']
+    return None
+async def accessisUse():
+    sql = 'select * from api where access_token = access_token'
+    # logger.info(sql+user_qq)
+    sql_select = sql
+
+    op_mysql = OperationMysql()
+    apiData = op_mysql.search_one(sql_select)
+    time = datetime.now()
+    print(apiData)
+    if (apiData == None or (time - apiData['last_insertTime']).days >= 20):
+        host = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client' \
+               '_credentials&client_id=KyOrM3sKbfHKySfg5tq9mNtm&client_secret=GuTEvPOxZwvP41vukcSFTjPmaP5iP0Bo'
+        response = requests.get(host)
+        if response:
+            print(response.json()['access_token'])
+            sql_update = 'update api set data = ' +"\\'"+ response.json()[
+                'access_token'] +"\\'"+ ',last_insertDate = now()' + ' where access_token = access_token'
+            logger.info(sql_update)
+
+            op_mysql = OperationMysql()
+            op_mysql.updata_one(sql_update)
+
+    sql = 'select * from api where access_token = access_token'
+    # logger.info(sql+user_qq)
+    sql_select = sql
+
+    op_mysql = OperationMysql()
+    apiData = op_mysql.search_one(sql_select)  # api所需要的值
+    print(apiData['data'])
+    return apiData['data']
+
+async def isHEfa( city : str,atoken : str):
+    flag = False
+    citys = str(city).split('[CQ:image,')
+    logger.info(citys)
+    i = 0
+    while i < len(citys):
+        imgs = citys[i]
+        # print(img)
+        # print(word)
+        # print(Message(city))
+        imgs = imgs.replace('[', '').replace(']', '').replace("\\\'", '')
+        img = imgs.split(",")
+        # 获得url
+        j = 0
+        while j < len(img):
+            if 'url' in img[j]:
+                reImg = img[j].replace('url=', '')
+                request_url = "https://aip.baidubce.com/rest/2.0/solution/v1/img_censor/v2/user_defined"
+                # 二进制方式打开图片文件
+                params = {
+                    "imgUrl": reImg}
+                access_token = atoken
+                request_url = request_url + "?access_token=" + access_token
+                headers = {'content-type': 'application/x-www-form-urlencoded'}
+                response = requests.post(request_url, data=params, headers=headers)
+                if response:
+                    print(response.json())
+                    if response.json()['conclusion'] == '不合规':
+                        flag = True
+
+            j += 1
+            print(j)
+
+        i += 1
+        print(i)
+    return flag
+
 
 wb_del_cmd = on_command('删除词条', permission=SUPERUSER | GROUP_OWNER | GROUP_ADMIN | PRIVATE_FRIEND | GROUP_MEMBER, )
 

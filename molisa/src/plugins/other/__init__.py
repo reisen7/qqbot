@@ -22,21 +22,21 @@ recall = on_notice(priority=99)
 
 
 # 私聊
-@recall.handle()
-async def _(bot: Bot, event: FriendRecallNoticeEvent):
-
-     mid = event.message_id
-     meg = await bot.get_msg(message_id=mid)
-     if event.user_id != event.self_id and 'type=flash,' not in meg['message']:
-        re = '刚刚说了:' + meg['message'] + '\n不要以为小奏没看见！'
-        await recall.finish(message=Message(re))
+# @recall.handle()
+# async def _(bot: Bot, event: FriendRecallNoticeEvent):
+#
+#      mid = event.message_id
+#      meg = await bot.get_msg(message_id=mid)
+#      if event.user_id != event.self_id and 'type=flash,' not in meg['message']:
+#         re = '刚刚说了:' + meg['message'] + '\n不要以为小奏没看见！'
+#         await recall.finish(message=Message(re))
 
 @poke.handle()
 async def _poke(bot: Bot, event: PokeNotifyEvent, state: T_State) -> None:
     msg = choice([
         "你再戳！", "？再戳试试？", "别戳了别戳了再戳就坏了555", "我爪巴爪巴，球球别再戳了", "你戳你🐎呢？！",
         "那...那里...那里不能戳...绝对...", "(。´・ω・)ん?", "有事恁叫我，别天天一个劲戳戳戳！", "欸很烦欸！你戳🔨呢",
-        "?", "差不多得了😅", "欺负咱这好吗？这不好", "我希望你耗子尾汁"
+        "?", "差不多得了😅", "欺负咱这好吗？这不好", "我希望你耗子尾汁","再戳就流水啦(〃＞目＜)"
     ])
 
     await poke.finish(msg, at_sender=True)

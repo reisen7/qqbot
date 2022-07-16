@@ -75,7 +75,7 @@ async def success(user_qq: str):
     return message
 
 
-info = on_command('个人信息',aliases={'我的背包', '我的金币'})
+info = on_command('个人信息', aliases={'我的背包', '我的金币'})
 @info.handle()
 async def info_select(bot: Bot, event: Event):
     user_qq = event.get_user_id()
@@ -93,4 +93,4 @@ async def info_select(bot: Bot, event: Event):
 corn = on_command('金币获取')
 @corn.handle()
 async def corn_method(bot: Bot, event: Event):
-    await bot.send(event, Message('签到获取，玩游戏获取，联系作者更改数据库'))
+    await bot.send(event, Message('签到获取，玩游戏获取，联系我主人更改数据库'))

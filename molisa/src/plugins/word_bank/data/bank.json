@@ -11,6 +11,17 @@
             ],
             "我是谁": [
                 "魔理沙"
+            ],
+            "你好": [
+                "我爱你",
+                "[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-4261846628-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3]",
+                "[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-4168188730-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3][CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-4168188730-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3]",
+                "[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-4044503821-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3]",
+                "[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-1914294594-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3]",
+                "[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-4016131805-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3]",
+                "\r\n[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-839396399-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3]",
+                "\r\n[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-2250446380-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3]",
+                "[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-133339891-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3]"
             ]
         },
         "695392621": {
@@ -44,18 +55,6 @@
             "主人": [
                 "我的主人是魔理沙"
             ],
-            "中国的皇帝是谁": [
-                "🐻"
-            ],
-            "皇帝": [
-                "🐻"
-            ],
-            "。。": [
-                "。。"
-            ],
-            "江泽民": [
-                "[CQ:image,file=672526da32c8ed606e006d8075b31dff.image,subType=0]"
-            ],
             "你主人的头像": [
                 "[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,subType=0]"
             ],
@@ -67,9 +66,6 @@
             ],
             "七海娜娜米": [
                 "我是七海挪挪米的粉丝"
-            ],
-            "台湾": [
-                "台湾犊栗[CQ:image,file=361d3e62bb642e8158be833e665eb0c4.image,subType=0]"
             ],
             "冷彦均": [
                 "[CQ:image,file=a84667ecdfc69e34804b6fc9baa6f7c2.image,subType=0]",
@@ -96,7 +92,8 @@
                 "[CQ:image,file=d1b56865141cf8e75f18e53a39d298dc.image,subType=1]",
                 "[CQ:image,file=c2592961538f026f5a107d15182798be.image,subType=1]",
                 "[CQ:image,file=4e7a1fc811054810a0b8e8d0b0311759.image,subType=1]",
-                "[CQ:image,file=ab071a750d94d8dab296823a05f926d6.image,subType=1]"
+                "[CQ:image,file=ab071a750d94d8dab296823a05f926d6.image,subType=1]",
+                "[CQ:image,file=f9e015db5aa10c891c0aa3799cc82a1d.image,url=https://gchat.qpic.cn/gchatpic_new/2749606183/993105896-3018466481-F9E015DB5AA10C891C0AA3799CC82A1D/0?term=3,subType=0]"
             ],
             "视频": [
                 "[CQ:video,file=a12fa0c0876cb13138ce72f569204aee.video,url=http://111.30.174.183:80/qqdownload?ver=537097188&amp;rkey=3081f90201010481f13081ee020101020100020465cc95a50481a2333034663032303130303034333433303332303230313030303230346436663734626664303230333761316462393032303436616231313230653032303436326432306666663034313061313266613063303837366362313331333863653732663536393230346165653032303130303032303130303034313430303030303030383636363936633635373437393730363530303030303030343331333033303331020462d2100004350000000866696c657479706500000004313030330000000b646f776e656e63727970740000000130000000047175696300000001300400&amp;filetype=1003&amp;videotype=1&amp;subvideotype=0&amp;term=unknow]"
@@ -125,20 +122,25 @@
             "音乐": [
                 "[CQ:json,data={\"app\":\"com.tencent.structmsg\"&#44;\"config\":{\"ctime\":1657939692&#44;\"forward\":true&#44;\"token\":\"722d68686849df126c934be9c7fedde6\"&#44;\"type\":\"normal\"}&#44;\"desc\":\"音乐\"&#44;\"extra\":{\"app_type\":1&#44;\"appid\":100495085&#44;\"msg_seq\":7120796752423969261&#44;\"uin\":328170849}&#44;\"meta\":{\"music\":{\"action\":\"\"&#44;\"android_pkg_name\":\"\"&#44;\"app_type\":1&#44;\"appid\":100495085&#44;\"ctime\":1657939692&#44;\"desc\":\"Saint Snow\"&#44;\"jumpUrl\":\"https://y.music.163.com/m/song?id=1344370353&amp;uct=sNZ0rabV5y5tjjDs9eLrxQ%3D%3D&amp;app_version=8.6.25\"&#44;\"musicUrl\":\"http://music.163.com/song/media/outer/url?id=1344370353&amp;userid=476019323&amp;sc=wmv\"&#44;\"preview\":\"http://p2.music.126.net/l9FMQLV4U9SYHMRKo2vuyA==/109951163842063709.jpg\"&#44;\"sourceMsgId\":\"0\"&#44;\"source_icon\":\"https://i.gtimg.cn/open/app_icon/00/49/50/85/100495085_100_m.png\"&#44;\"source_url\":\"\"&#44;\"tag\":\"网易云音乐\"&#44;\"title\":\"Believe again\"&#44;\"uin\":328170849}}&#44;\"prompt\":\"&#91;分享&#93;Believe again\"&#44;\"ver\":\"0.0.0.1\"&#44;\"view\":\"music\"}]"
             ],
-            "随机出户": [
-                "[CQ:image,file=39265d42f6a51f559fc5878e8ceda2c2.image,url=https://gchat.qpic.cn/gchatpic_new/2749606183/993105896-3011350433-39265D42F6A51F559FC5878E8CEDA2C2/0?term=3,subType=0]"
-            ],
             "哦": [
                 "你们呀，native​"
             ],
             "额": [
                 "[CQ:image,file=e905d91bf1591d0074d618ed97b00b62.image,url=https://gchat.qpic.cn/gchatpic_new/2749606183/993105896-3152059358-E905D91BF1591D0074D618ED97B00B62/0?term=3,subType=0]"
             ],
-            "最电影预告": [
-                "[CQ:image,file=1c1e51edf7802e18ff3e47ffe9dfc2c5.image,url=https://gchat.qpic.cn/gchatpic_new/2749606183/993105896-2943901686-1C1E51EDF7802E18FF3E47FFE9DFC2C5/0?term=3,subType=0]"
+            "语音": [
+                "[CQ:record,file=4AEFC4F2-8DD9-6A1A-D86B-6B7E6F793DD7.amr,url=http://grouptalk.c2c.qq.com/?ver=0&amp;rkey=3062020101045b3059020101020101020465cc95a5042439414f315677715455644e7a5a3543694c6a495964434a7171775a714856547256525052020462d2af87041f0000000866696c6574797065000000013100000005636f64656300000001310400&amp;filetype=1&amp;voice_codec=1]",
+                "[CQ:record,file=E23D758BA7F41ADEE8A7E6A3D11B6551.amr,url=http://grouptalk.c2c.qq.com/?ver=0&amp;rkey=3062020101045b3059020101020101020465cc95a5042439387a4f41616a595a635755467579555a6b547944694c36757a234643667151726b6d6b020462d2b36e041f0000000866696c6574797065000000013100000005636f64656300000001310400&amp;filetype=1&amp;voice_codec=1]"
             ],
-            "最新电影预告": [
-                "[CQ:image,file=1c1e51edf7802e18ff3e47ffe9dfc2c5.image,url=https://gchat.qpic.cn/gchatpic_new/2749606183/993105896-2359736163-1C1E51EDF7802E18FF3E47FFE9DFC2C5/0?term=3,subType=0]"
+            "闪照": [
+                "？",
+                "&#91;CQ:image,file=eee923732ae6510824e4bf5385f3844a.image,url=,type=flash,subType=0&#93;"
+            ],
+            "可莉": [
+                "[CQ:image,file=f8694b4ef38f9d1acae209d1f16e0ad8.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/993105896-3177600762-F8694B4EF38F9D1ACAE209D1F16E0AD8/0?term=3,subType=1]"
+            ],
+            "圣之雪": [
+                "https://www.bilibili.com/video/BV1Pt4y1t783?p=3&amp;vd_source=2e4552f5a115e6f60849606f2b2fac08"
             ]
         },
         "1062564756": {
@@ -178,6 +180,9 @@
             ],
             "视频": [
                 "[CQ:video,file=be0a9d9621b0dfdee3d230225f208a27.video,url=http://111.30.174.153:80/qqdownload?ver=537097188&amp;rkey=3081f90201010481f13081ee020101020100020465cc95a50481a2333034663032303130303034333433303332303230313030303230343031313362333838303230333761316166663032303463333939303230393032303436326432323831383034313062653061396439363231623064666465653364323330323235663230386132373032303130303032303130303034313430303030303030383636363936633635373437393730363530303030303030343331333033303331020462d2281804350000000866696c657479706500000004313030330000000b646f776e656e63727970740000000130000000047175696300000001300400&amp;filetype=1003&amp;videotype=1&amp;subvideotype=0&amp;term=unknow]"
+            ],
+            "成员生日": [
+                "[CQ:image,file=44a905e7754862691fd8006358446f2f.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-2620333753-44A905E7754862691FD8006358446F2F/0?term=3,subType=0]"
             ]
         },
         "779624805": {
