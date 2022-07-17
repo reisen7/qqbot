@@ -1,5 +1,8 @@
+import random
+
+import aiocqhttp
 import requests
-from nonebot import on_notice, on_keyword, on_command
+from nonebot import on_notice, on_keyword, on_command, logger
 from nonebot.adapters.onebot.v11 import Bot, GroupIncreaseNoticeEvent, GroupDecreaseNoticeEvent, GroupUploadNoticeEvent, \
     GroupAdminNoticeEvent, Message, GroupMessageEvent, MessageSegment
 
@@ -50,7 +53,7 @@ async def handle_first_receive(bot: Bot, event: GroupIncreaseNoticeEvent, state:
             }
         }
     ]
-    await bot.send(event=event, message=rely)
+    await bot.send(event=event, message=Message(str(aiocqhttp.Message(rely))))
 
 
 # 检测离开群成员
@@ -91,7 +94,7 @@ async def handle_first_receive(bot: Bot, event: GroupDecreaseNoticeEvent, state:
             }
         }
     ]
-    await bot.send(event=event, message=rely)
+    await bot.send(event=event, message=Message(str(aiocqhttp.Message(rely))))
 
 
 # 检测文件上传
@@ -138,7 +141,7 @@ async def handle_first_receive(bot: Bot, event: GroupUploadNoticeEvent, state: T
             }
         }
     ]
-    await bot.send(event=event, message=rely)
+    await bot.send(event=event, message=Message(str(aiocqhttp.Message(rely))))
 
 
 # 检测管理变动
@@ -340,7 +343,7 @@ async def h(bot: Bot, event: GroupMessageEvent):
     await bot._send_group_notice(group_id=gid,content=msg1)
 
 
-t=on_keyword({'获取群文件信息'})
+t=on_keyword({'获取群文件信息','群文件信息'})
 @t.handle()
 async def j(bot:Bot,event:GroupMessageEvent):
     gid=event.group_id
@@ -364,5 +367,8 @@ async def j(bot:Bot,event:GroupMessageEvent):
     at_ = f"[CQ:at,qq={l}]"
     dc=lw.get('day_count')
     print(dc)
-    await t.send(Message('恭喜'+at_+'为今日龙王'+'\n'+'持续天数为：'+str(dc)))
+    if d :
+        await t.send(Message('恭喜' + at_ + '为今日龙王' + '\n' + '持续天数为：' + str(dc)))
+    else:
+        await t.send(Message('没有龙王'))
 

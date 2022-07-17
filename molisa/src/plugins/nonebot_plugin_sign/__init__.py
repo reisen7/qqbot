@@ -75,7 +75,7 @@ async def success(user_qq: str):
     return message
 
 
-info = on_command('个人信息', aliases={'我的背包', '我的金币'})
+info = on_command('个人信息')
 @info.handle()
 async def info_select(bot: Bot, event: Event):
     user_qq = event.get_user_id()
@@ -88,7 +88,10 @@ async def info_select(bot: Bot, event: Event):
     at_ = "[CQ:at,qq={}]".format(user_qq)
     message = at_ +'\n' + '已连续签到 ' + str(user['count']) + ' 天' + '\n' + '金币有 ' + str(
         user['integral']) + '\n' + '最后一次签到时间：' + str(user['last_insertDate'].strftime("%Y-%m-%d %H:%M:%S"))
-    await bot.send(event, Message(message))
+    if message:
+        await bot.send(event, Message(message))
+    else:
+        await bot.send(event, Message("暂未有相关信息~"))
 
 corn = on_command('金币获取')
 @corn.handle()

@@ -28,7 +28,7 @@ nonebot.load_plugins("src/plugins")
 nonebot.load_plugin("nonebot_plugin_htmlrender")
 nonebot.load_plugin("nonebot_plugin_boardgame")
 nonebot.load_plugin("nonebot_plugin_cchess")
-
+nonebot.load_plugin("nonebot_plugin_gamedraw")
 app = nonebot.get_asgi()
 
 driver = nonebot.get_driver()

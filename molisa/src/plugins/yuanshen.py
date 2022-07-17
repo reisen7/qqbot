@@ -11,7 +11,7 @@ from aiocqhttp.exceptions import Error as CQHttpError
 from nonebot.rule import to_me
 from .ConfigSql import OperationMysql
 
-da = on_command('原神',rule=to_me(),aliases={"原神烧鸡","原批", "genshin"})
+da = on_command('原批',rule=to_me(),aliases={"原神烧鸡","原批"})
 
 @da.handle()
 async def h(bot: Bot, event: Event, state: T_State):
@@ -31,13 +31,15 @@ async def h(bot: Bot, event: Event, state: T_State):
         else:
 
             try:
+
+                msg = await se()
+                await da.send(Message('金币-1'+msg))
+
                 sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
                     user_qq)
 
                 op_mysql = OperationMysql()
                 op_mysql.updata_one(sql_update)
-                msg = await se()
-                await da.send(Message(msg))
 
             except CQHttpError:
                 await da.send(Message('现在暂时没有图片哦~'))

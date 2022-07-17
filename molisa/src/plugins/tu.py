@@ -19,13 +19,40 @@ yulu = on_command('美女', rule=to_me())
 
 @yulu.handle()
 async def j(bot: Bot, event: Event, state: T_State):
-    msg = await qian()
-    print(msg)
-    try:
-        await yulu.send(Message(msg))
 
-    except CQHttpError:
-        await yulu.send("发送失败，请再试一次")
+
+    user_qq = event.get_user_id()
+    sql = 'select * from sign where user_qq = '
+    # logger.info(sql+user_qq)
+    sql_select = sql+user_qq
+
+    op_mysql = OperationMysql()
+    user = op_mysql.search_one(sql_select)
+
+
+    if user:
+        if user['integral'] == 0:
+            await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
+
+        else:
+
+            try:
+
+                msg = await qian()
+                await yulu.send(Message('金币-1'+msg))
+                sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
+                    user_qq)
+
+                op_mysql = OperationMysql()
+                op_mysql.updata_one(sql_update)
+
+            except CQHttpError:
+                await yulu.send(Message('发送失败，请再试一次'))
+
+    else:
+        await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
+
+
 
 
 async def qian():
@@ -61,11 +88,6 @@ async def j(bot: Bot, event: Event, state: T_State):
         else:
 
             try:
-                sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
-                    user_qq)
-
-                op_mysql = OperationMysql()
-                op_mysql.updata_one(sql_update)
 
                 a = random.randint(0, 1)
                 if a == 1:
@@ -73,7 +95,12 @@ async def j(bot: Bot, event: Event, state: T_State):
                 if a == 0:
                     msg = await heisi()
 
-                await yulu.send(Message(msg))
+                await yulu.send(Message('金币-1'+msg))
+                sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
+                    user_qq)
+
+                op_mysql = OperationMysql()
+                op_mysql.updata_one(sql_update)
 
             except CQHttpError:
                 await yulu.send(Message('发送失败，请再试一次'))

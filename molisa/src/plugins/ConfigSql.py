@@ -36,6 +36,12 @@ cursor.execute("SELECT VERSION()")
         # result = self.cur.fetchall()  # 显示所有结果
         return result
 
+    def search_all(self, sql):
+        self.cur.execute(sql)
+        # result = self.cur.fetchone()  # 使用 fetchone()方法获取单条数据.只显示一行结果
+        result = self.cur.fetchall()  # 显示所有结果
+        return result
+
     # 更新SQL
     def updata_one(self, sql):
         try:

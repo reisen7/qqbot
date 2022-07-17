@@ -6,7 +6,7 @@ from nonebot.adapters.onebot.v11 import Message, MessageSegment, GroupMessageEve
 from nonebot.params import Depends, CommandArg, State
 from nonebot.rule import Rule
 from .handler import random_tkk_handler
-from .MyBotSql import OperationMysql
+from ..ConfigSql import OperationMysql
 
 levels = None
 __randomtkk_vsrsion__ = "v0.1.1"
@@ -57,20 +57,22 @@ async def _(matcher: Matcher, event: MessageEvent, args: Message = CommandArg())
     if not args:
         await matcher.send("未指定难度，默认普通模式")
         level = "普通"
-        global levels
-        levels = level
+
     elif args and len(args) == 1: 
         if args[0] == "帮助":
             await matcher.finish(__randomtkk_notes__)
         level = args[0]
-        levels = level
+
     else:
         await matcher.finish("参数太多啦~")
     
     if isinstance(event, GroupMessageEvent):
         img_file, waiting = await random_tkk_handler.one_go(matcher, gid, uid, level)
+        global levels
+        levels = waiting
     else:
         img_file, waiting = await random_tkk_handler.one_go(matcher, uid, uid, level)
+        levels = waiting
     
     await matcher.send(MessageSegment.image(img_file))
     
@@ -108,14 +110,14 @@ async def _(event: MessageEvent, state: T_State = Depends(get_user_guess)):
             op_mysql = OperationMysql()
             user = op_mysql.search_one(sql_select)
             if user:
-                size = random_tkk_handler.config_tkk_size(level=levels)
-                sql_update = 'update sign set  integral = integral +' + str(size / 10) + ' where user_qq =' + str(
+
+                sql_update = 'update sign set  integral = integral +' + str(levels / 10) + ' where user_qq =' + str(
                     event.user_id)
                 logger.info(sql_update)
 
                 op_mysql = OperationMysql()
                 op_mysql.updata_one(sql_update)
-                size = int(size/10)
+                size = int(levels/10)
                 await guess_tkk.finish("答对啦，好厉害！" + '金币 + ' + str(size), at_sender=True)
             else:
                 await guess_tkk.finish("答对啦，好厉害！", at_sender=True)

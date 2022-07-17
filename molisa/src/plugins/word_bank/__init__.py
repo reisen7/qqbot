@@ -16,7 +16,8 @@ from nonebot.adapters.onebot.v11.utils import unescape
 from nonebot.adapters.onebot.v11.permission import GROUP_OWNER, GROUP_ADMIN, PRIVATE_FRIEND,GROUP_MEMBER
 from .data_source import OPTIONS, word_bank as wb
 from .util import parse, parse_cmd
-from .MyBotSql import OperationMysql
+from ..ConfigSql import OperationMysql
+
 reply_type = "random"
 
 export().word_bank = wb
@@ -153,7 +154,7 @@ async def wb_response( bot: Bot, event: MessageEvent, city: Message = Arg()):
         isText = True
         access_t = await accessisUse()
         w = await testisHEFA(city=city, access_t=access_t)
-        if w == '不合规':
+        if w == '不合规' or w == '疑似':
             flag = True
 
     if flag == True and isImg == True:
@@ -200,6 +201,7 @@ async def testisHEFA(city: str, access_t: str):
         print(response.json())
         return response.json()['conclusion']
     return None
+
 async def accessisUse():
     sql = 'select * from api where access_token = access_token'
     # logger.info(sql+user_qq)
@@ -258,7 +260,7 @@ async def isHEfa( city : str,atoken : str):
                 response = requests.post(request_url, data=params, headers=headers)
                 if response:
                     print(response.json())
-                    if response.json()['conclusion'] == '不合规':
+                    if response.json()['conclusion'] == '不合规' or response.json()['conclusion'] =='疑似':
                         flag = True
 
             j += 1

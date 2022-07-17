@@ -28,12 +28,14 @@ async def h(bot: Bot, event: Event, state: T_State):
         else:
 
             try:
+
+                msg = await se()
+                await da.send(Message('金币-1'+msg))
+
                 sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
                     user_qq)
-                msg = await se()
                 op_mysql = OperationMysql()
                 op_mysql.updata_one(sql_update)
-                await da.send(Message(msg))
 
             except CQHttpError:
                 await da.send(Message('现在暂时没有图片哦~'))
