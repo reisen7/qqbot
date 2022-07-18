@@ -1,5 +1,6 @@
 import random
 
+import aiocqhttp
 from nonebot.adapters.onebot.v11 import Message
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
@@ -116,7 +117,15 @@ async def mei():
     proxies = {"http": None, "https": None}
     try:
         resp = requests.get(url=url, verify=False, proxies=proxies).url
-        tu = f"[CQ:image,file={resp}]"
+
+        repy = [
+            {
+                "type": "image",
+                "data": {
+                    "file": resp
+                }
+            }
+        ]
 
     except BaseException:
         tu = '现在暂时没有烧鸡呢~请稍后再试'
@@ -126,7 +135,7 @@ async def mei():
     # # test = resp['imgurl']
     # test = y[3].replace("\\", "")
 
-    return tu
+    return str(aiocqhttp.Message(repy))
 
 
 async def heisi():
@@ -137,8 +146,17 @@ async def heisi():
     y = x[1].split('"')
     # test = resp['imgurl']
     test = y[3].replace("\\", "")
-    tu = f"[CQ:image,file={test}]"
-    return tu
+
+    repy = [
+        {
+            "type": "image",
+            "data": {
+                "file": test
+            }
+        }
+    ]
+
+    return str(aiocqhttp.Message(repy))
 
 
 yulu = on_command('肉丝', rule=to_me())

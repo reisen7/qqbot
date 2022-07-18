@@ -2,7 +2,7 @@ from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Event
 from nonebot import on_command, on_keyword
-from nonebot.adapters.onebot.v11 import Bot
+from nonebot.adapters.onebot.v11 import Bot, Message
 
 test = on_command('你好', rule=to_me(), priority=0)
 
@@ -97,4 +97,13 @@ async def wanan_first_send(event:Event, state: T_State):
 
 
 async def get_wenhao():
-    return "?~ 喵喵喵~"
+    return "?~ "
+
+
+
+zhuren = on_keyword({'主人'}, rule=to_me())
+
+
+@zhuren.handle()
+async def handle_first_receive(bot: Bot, event: Event, state: T_State):
+    await test.send(Message("我主人是魔理沙"))

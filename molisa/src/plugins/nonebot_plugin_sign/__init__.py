@@ -75,7 +75,7 @@ async def success(user_qq: str):
     return message
 
 
-info = on_command('个人信息')
+info = on_command('个人信息',aliases={'我的个人信息'})
 @info.handle()
 async def info_select(bot: Bot, event: Event):
     user_qq = event.get_user_id()

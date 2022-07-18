@@ -22,12 +22,11 @@ async def lookfor_shop(bot :Bot ,event :Event):
     op_mysql = OperationMysql()
     shopObj = op_mysql.search_all(selectsql)
 
-    shopAll = '    名称           价格  攻击力  防御力   品质' + '\n'
+    shopAll = '\n'+'    名称             价格' + '\n'
     i = 0
     while i < len(shopObj):
         shopAll += '{:　<8}'.format(str(shopObj[i]['name'])) +' '+ '{: <4}'.format(
-            str(shopObj[i]['price'])) + '{: <4}'.format(str(shopObj[i]['atk'])) + '{: <4}'.format(
-            str(shopObj[i]['dep'])) + '{:　<4}'.format(shopObj[i]['star'] + '星') + '\n'
+            str(shopObj[i]['price'])) + '\n'
         i += 1
     print(shopAll)
     await shop.send(message=Message(shopAll))
@@ -63,7 +62,8 @@ async def object(event: Event, obj: Message = Arg(), obj_name: str = ArgPlainTex
 
     if user == None:
         await by.send("请先进行签到~")
-
+    elif byobj == None:
+        await by.send("商店暂时没有该物品")
     elif user['integral'] >=  byobj['price']:
         sql3 = "insert into bag values (null,"+str(user['user_qq'])+' ,'+ str(byobj['id']) +' )'
         op_mysql = OperationMysql()
@@ -80,7 +80,7 @@ async def object(event: Event, obj: Message = Arg(), obj_name: str = ArgPlainTex
         await by.send("您的金币不够啦~请输入'金币获取'来查看获取方式吧")
 
 
-bag = shop = on_command('我的背包',aliases={"我的金币",'查看背包'})
+bag = shop = on_command('我的背包', aliases={"我的金币",'查看背包','我的物品'})
 @bag.handle()
 async def lookBag(bot:Bot , event:Event):
 
@@ -99,7 +99,7 @@ async def lookBag(bot:Bot , event:Event):
     if user:
         message = '你的金币: ' + str(user['integral']) + '\n'
 
-        b = '物品:'+'\n'
+        b = '\n'+'物品:'+'\n'
         i = 0
         while i < len(bags):
             b += bags[i]['name'] + '  *' + str(bags[i]['sum']) + '\n'
