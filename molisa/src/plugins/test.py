@@ -89,15 +89,9 @@ wenhao = on_command("？")
 
 @wenhao.handle()
 async def wanan_first_send(event:Event, state: T_State):
-    args = str(event.get_message()).strip()
-    if args:
-        state["city"] = args
-        weather=await get_wenhao()
-        await wanan.send(weather)
 
-
-async def get_wenhao():
-    return "?~ "
+    img = "https://gchat.qpic.cn/gchatpic_new/3410530177/993105896-3151105555-9E0F5BFDEA84C60319775F8FCAD66804/0?term=3,subType=1"
+    await wanan.send(Message(img))
 
 
 

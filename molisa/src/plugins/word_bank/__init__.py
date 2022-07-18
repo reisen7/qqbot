@@ -89,7 +89,7 @@ async def chat(city : str):
         yuju = words.split('}')
         face = yuju[0].split(':')[1]
         words = "[CQ:face,id={}]{}".format(face, yuju[1])
-    words = words.replace('菲菲', '小奏').replace('雪梅', '魔理沙').replace('小菲', '小奏')
+    words = words.replace('菲菲', '小奏').replace('雪梅', '魔理沙').replace('小菲', '小奏').replace("{br}", "\n")
     return words
 
 
@@ -145,7 +145,7 @@ async def wb_response( bot: Bot, event: MessageEvent, city: Message = Arg()):
     isImg = False
     isText = False
     city = str(city).replace("\n", '').replace("\r", '')
-    if 'CQ:image' in str(city):
+    if 'image' in str(city):
         isImg = True
         access_t = await accessisUse()
         flag = await isHEfa(city, access_t)

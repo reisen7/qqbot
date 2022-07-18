@@ -24,7 +24,7 @@ async def h(bot: Bot, event: Event, state: T_State):
     op_mysql = OperationMysql()
     user = op_mysql.search_one(sql_select)
 
-    if user:
+    if not user==None:
         if user['integral'] == 0:
             await da.send(Message('你的金币不足哦~快向小奏签到获取吧'))
 
