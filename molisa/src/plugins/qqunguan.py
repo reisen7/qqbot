@@ -272,7 +272,7 @@ shu = on_keyword({'头衔'},priority=60)
 async def s(bot: Bot, event: GroupMessageEvent, state: T_State):
     gid = event.group_id
     uid = event.user_id
-    await bot.set_group_special_title(group_id=gid, user_id=uid, special_title='我是群里最帅', duration=6666)
+    await bot.set_group_special_title(group_id=gid, user_id=uid, special_title='小奏的亲人', duration=6666)
 
 
 # 全员禁言

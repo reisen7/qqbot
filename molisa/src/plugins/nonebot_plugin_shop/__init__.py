@@ -22,12 +22,12 @@ async def lookfor_shop(bot :Bot ,event :Event):
     op_mysql = OperationMysql()
     shopObj = op_mysql.search_all(selectsql)
 
-    shopAll = '    名称                价格  攻击力  防御力   品质' + '\n'
+    shopAll = '    名称           价格  攻击力  防御力   品质' + '\n'
     i = 0
     while i < len(shopObj):
-        shopAll += '{:　<9}'.format(str(shopObj[i]['name'])) + '{: <2}'.format(
-            str(shopObj[i]['price'])) + '        ' + '{: <2}'.format(str(shopObj[i]['atk'])) + '        ' + '{: <2}'.format(
-            str(shopObj[i]['dep'])) + '         ' + '{:　<3}'.format(shopObj[i]['star'] + '星') + '\n'
+        shopAll += '{:　<8}'.format(str(shopObj[i]['name'])) +' '+ '{: <4}'.format(
+            str(shopObj[i]['price'])) + '{: <4}'.format(str(shopObj[i]['atk'])) + '{: <4}'.format(
+            str(shopObj[i]['dep'])) + '{:　<4}'.format(shopObj[i]['star'] + '星') + '\n'
         i += 1
     print(shopAll)
     await shop.send(message=Message(shopAll))
@@ -99,7 +99,7 @@ async def lookBag(bot:Bot , event:Event):
     if user:
         message = '你的金币: ' + str(user['integral']) + '\n'
 
-        b = ''
+        b = '物品:'+'\n'
         i = 0
         while i < len(bags):
             b += bags[i]['name'] + '  *' + str(bags[i]['sum']) + '\n'

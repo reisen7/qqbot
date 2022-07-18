@@ -23,7 +23,7 @@ async def sign_user(bot: Bot, event: Event):
     time = datetime.now().strftime("%Y-%m-%d")
     # logger.info(time)
     # logger.info(user['last_insertDate'].strftime("%Y-%m-%d"))
-    if user:
+    if not(user == None):
        if user['last_insertDate'].strftime("%Y-%m-%d") == time:
            # sql_update = 'update sign set count = count + ' + '1' + ', last_insertDate = now(), integral = integral + 1' + ' where user_qq =' + user_qq
            # logger.info(sql_update)
@@ -88,7 +88,7 @@ async def info_select(bot: Bot, event: Event):
     at_ = "[CQ:at,qq={}]".format(user_qq)
     message = at_ +'\n' + '已连续签到 ' + str(user['count']) + ' 天' + '\n' + '金币有 ' + str(
         user['integral']) + '\n' + '最后一次签到时间：' + str(user['last_insertDate'].strftime("%Y-%m-%d %H:%M:%S"))
-    if message:
+    if not user==None:
         await bot.send(event, Message(message))
     else:
         await bot.send(event, Message("暂未有相关信息~"))

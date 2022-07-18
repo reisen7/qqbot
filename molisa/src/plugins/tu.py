@@ -39,6 +39,7 @@ async def j(bot: Bot, event: Event, state: T_State):
             try:
 
                 msg = await qian()
+                print(msg)
                 await yulu.send(Message('金币-1'+msg))
                 sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
                     user_qq)
@@ -94,7 +95,7 @@ async def j(bot: Bot, event: Event, state: T_State):
                     msg = await mei()
                 if a == 0:
                     msg = await heisi()
-
+                print(msg)
                 await yulu.send(Message('金币-1'+msg))
                 sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
                     user_qq)
