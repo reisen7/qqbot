@@ -1,3 +1,4 @@
+import aiocqhttp
 from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Event
@@ -91,9 +92,23 @@ wenhao = on_command("？")
 async def wanan_first_send(event:Event, state: T_State):
 
     img = "https://gchat.qpic.cn/gchatpic_new/3410530177/993105896-3151105555-9E0F5BFDEA84C60319775F8FCAD66804/0?term=3,subType=1"
-    await wanan.send(Message(img))
+    repy = [
+        {
+            "type": "image",
+            "data": {
+                "file": img
+            }
+        }
+    ]
+    await wanan.send(Message(str(aiocqhttp.Message(repy))))
 
 
+wenhao = on_command("哈哈")
+
+@wenhao.handle()
+async def wanan_first_send(event:Event, state: T_State):
+
+    await wanan.send(Message('笑你妈'))
 
 zhuren = on_keyword({'主人'}, rule=to_me())
 
@@ -101,3 +116,11 @@ zhuren = on_keyword({'主人'}, rule=to_me())
 @zhuren.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
     await test.send(Message("我主人是魔理沙"))
+
+
+wenhao = on_command("小游戏")
+
+@wenhao.handle()
+async def wanan_first_send(event:Event, state: T_State):
+
+    await wanan.send(Message('随机唐可可(可获得金币)，五子棋，围棋，黑白棋，象棋对战，象棋人机(lv1~8)，扫雷'))

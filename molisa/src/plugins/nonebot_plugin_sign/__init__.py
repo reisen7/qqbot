@@ -48,7 +48,7 @@ async def sign_user(bot: Bot, event: Event):
            message = await success(user_qq)
            await bot.send(event, Message(message))
     else:
-        sql_insert = 'insert into sign values ' + '( ' + user_qq + ',' + '1, now(),1)'
+        sql_insert = 'insert into sign values ' + '( ' + user_qq + ',' + '1, now(),1,null)'
         logger.info(sql_insert)
 
         op_mysql = OperationMysql()
@@ -96,4 +96,4 @@ async def info_select(bot: Bot, event: Event):
 corn = on_command('金币获取')
 @corn.handle()
 async def corn_method(bot: Bot, event: Event):
-    await bot.send(event, Message('签到获取，玩游戏获取，联系我主人更改数据库'))
+    await bot.send(event, Message('签到获取，玩游戏（随机唐可可）获取，联系我主人更改数据库'))

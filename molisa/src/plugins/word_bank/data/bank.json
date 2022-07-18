@@ -103,7 +103,9 @@
                 "[CQ:image,file=ff55511ab5cf241fcaced21d00100ebd.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/993105896-2889961440-FF55511AB5CF241FCACED21D00100EBD/0?term=3,subType=0]",
                 "[CQ:image,file=0c0a3baffeb34eaf8cef82d0ebd9adb4.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/993105896-2864112203-0C0A3BAFFEB34EAF8CEF82D0EBD9ADB4/0?term=3,subType=1]",
                 "[CQ:image,file=743ac17385d54a3afd4ee008a204814c.image,url=https://gchat.qpic.cn/gchatpic_new/2749606183/993105896-2974301496-743AC17385D54A3AFD4EE008A204814C/0?term=3,subType=0]",
-                "[CQ:image,file=86b905f6a9ba7261831899d34983e346.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/993105896-2468694547-86B905F6A9BA7261831899D34983E346/0?term=3,subType=1]"
+                "[CQ:image,file=86b905f6a9ba7261831899d34983e346.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/993105896-2468694547-86B905F6A9BA7261831899D34983E346/0?term=3,subType=1]",
+                "[CQ:image,file=c76ec7a695def0baa7a3e9522d8ae978.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/993105896-2628698303-C76EC7A695DEF0BAA7A3E9522D8AE978/0?term=3,subType=1]",
+                "[CQ:image,file=685f22ae3ef4ba1c61197d2a9f21be1c.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/993105896-2804878852-685F22AE3EF4BA1C61197D2A9F21BE1C/0?term=3,subType=1]"
             ],
             "视频": [
                 "[CQ:video,file=a12fa0c0876cb13138ce72f569204aee.video,url=http://111.30.174.183:80/qqdownload?ver=537097188&amp;rkey=3081f90201010481f13081ee020101020100020465cc95a50481a2333034663032303130303034333433303332303230313030303230346436663734626664303230333761316462393032303436616231313230653032303436326432306666663034313061313266613063303837366362313331333863653732663536393230346165653032303130303032303130303034313430303030303030383636363936633635373437393730363530303030303030343331333033303331020462d2100004350000000866696c657479706500000004313030330000000b646f776e656e63727970740000000130000000047175696300000001300400&amp;filetype=1003&amp;videotype=1&amp;subvideotype=0&amp;term=unknow]"
@@ -169,6 +171,26 @@
             ],
             "台湾": [
                 "台湾独立[CQ:image,file=8424848141b9e3db426791d1c2b4fd5f.image,url=https://gchat.qpic.cn/gchatpic_new/2749606183/993105896-2498691027-8424848141B9E3DB426791D1C2B4FD5F/0?term=3,subType=0]"
+            ],
+            "Aqours": [
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1963764755]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1963057446&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1939199325&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1928436869&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1479763665&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1479761763&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1479763666&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1903455372&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=444058067&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=536622965&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=566442298&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=864100875&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1885529762&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=862098980&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=426850013&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1937114538&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=421160925&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=429348296&amp;userid=476019323]"
             ]
         },
         "1062564756": {
@@ -191,7 +213,24 @@
                 "我的主人是魔理沙"
             ],
             "Aqours": [
-                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1963764755]"
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1963764755]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1963057446&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1939199325&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1928436869&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1479763665&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1479761763&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1479763666&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1903455372&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=444058067&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=536622965&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=566442298&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=864100875&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1885529762&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=862098980&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=426850013&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1937114538&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=421160925&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=429348296&amp;userid=476019323]"
             ],
             "龙图": [
                 "[CQ:image,file=654715c3f2f8a141621a8cb95a895fb8.image,subType=0]",
@@ -211,6 +250,28 @@
             ],
             "成员生日": [
                 "[CQ:image,file=44a905e7754862691fd8006358446f2f.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-2620333753-44A905E7754862691FD8006358446F2F/0?term=3,subType=0]"
+            ]
+        },
+        "822492001": {
+            "Aqours": [
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1963764755]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1963057446&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1939199325&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1928436869&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1479763665&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1479761763&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1479763666&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1903455372&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=444058067&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=536622965&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=566442298&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=864100875&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1885529762&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=862098980&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=426850013&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=1937114538&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=421160925&amp;userid=476019323]",
+                "[CQ:record,file=http://music.163.com/song/media/outer/url?id=429348296&amp;userid=476019323]"
             ]
         },
         "779624805": {
