@@ -18,8 +18,9 @@ recall = on_notice(priority=99)
 #     meg = await bot.get_msg(message_id=mid)
 #     if event.user_id != event.self_id and 'type=flash,' not in meg['message']:
 #         re = '刚刚说了:' + meg['message'] + '\n不要以为小奏没看见！'
+#         print(meg)
 #         await recall.finish(message=Message(re), at_sender=True)
-
+#
 
 # 私聊
 # @recall.handle()

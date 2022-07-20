@@ -20,4 +20,7 @@ async def echo_escape(event:MessageEvent ,message: Message = CommandArg()):
             }
         }
     ]
-    await echo.send(message=Message(str(aiocqhttp.Message(repy))))
+
+    repys = """[CQ:xml,data=<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><msg serviceID="1" templateID="-1" action="web" brief="小奏已进群监听聊天" sourceMsgId="0" url="" flag="0" adverSign="0" multiMsgFlag="0"><item layout="2" advertiser_id="0" aid="0"><picture cover="https://gchat.qpic.cn/gchatpic_new/328170849/993105896-2519025998-33A501D3C7EEDC30296DA0812A1A0972/0?term=3,subType=0" w="0" h="0" /><title>小奏已进群监听聊天</title><summary>请注意聊天言辞</summary></item><source name="" icon="" action="" appid="0" /></msg>,resid=1]"""
+    print(repys)
+    await echo.send(message=Message(repys))

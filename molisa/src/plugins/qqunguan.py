@@ -212,48 +212,48 @@ async def handle_first_receive(bot: Bot, event: GroupAdminNoticeEvent, state: T_
 
 
 # 单人禁言
-ban = on_keyword({'广告', '沙雕', '广告', 'md'}, priority=60)
-
-
-@ban.handle()
-async def b(bot: Bot, event: GroupMessageEvent, state: T_State):
-    gid = event.group_id
-    uid = event.user_id
-    url = 'https://api.oioweb.cn/api/qq.php?qq=%s' % uid
-    d = requests.get(url=url).json()
-    img = d['imgurl']
-    # ni=d['name']
-    tu = f"[CQ:image,file={img}]"
-    await ban.send(message=MessageSegment.at(uid) + Message(tu) + '请不要打广告或者使用不良语言哦！禁言十分钟警告处理!!')
-    await bot.set_group_ban(group_id=gid, user_id=uid, duration=600, st_sender=True)
-
-
-# 匿名禁言
-nban = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', }, priority=60)
-
-
-@nban.handle()
-async def n(bot: Bot, event: GroupMessageEvent, state: T_State):
-    gid = event.group_id
-    nm = event.anonymous.json()
-    data = eval(nm)
-    flag = data['flag']
-    # print(data)
-    # print(flag)
-    # print(gid)
-    await nban.send('请不要打广告或者使用不良语言哦！消息已经被撤回，下不为例，禁言十分钟警告处理!!')
-    await bot.set_group_anonymous_ban(group_id=gid, anonymous=nm, anonymous_flag=flag, duration=600)
-
-
-# 撤回消息
-che = on_keyword({'广告', '沙雕', '广告', 'md', '妈的',  '操你妈', '操你',} ,priority=60)
-
-
-@che.handle()
-async def c(bot: Bot, event: GroupMessageEvent, state: T_State):
-    mid = event.message_id
-    print(mid)
-    await bot.delete_msg(message_id=mid)
+# ban = on_keyword({'广告', '沙雕', '广告'}, priority=60)
+#
+#
+# @ban.handle()
+# async def b(bot: Bot, event: GroupMessageEvent, state: T_State):
+#     gid = event.group_id
+#     uid = event.user_id
+#     url = 'https://api.oioweb.cn/api/qq.php?qq=%s' % uid
+#     d = requests.get(url=url).json()
+#     img = d['imgurl']
+#     # ni=d['name']
+#     tu = f"[CQ:image,file={img}]"
+#     await ban.send(message=MessageSegment.at(uid) + Message(tu) + '请不要打广告或者使用不良语言哦！禁言十分钟警告处理!!')
+#     await bot.set_group_ban(group_id=gid, user_id=uid, duration=600, st_sender=True)
+#
+#
+# # 匿名禁言
+# nban = on_keyword({'广告', '沙雕', '广告', 'md', '妈的', }, priority=60)
+#
+#
+# @nban.handle()
+# async def n(bot: Bot, event: GroupMessageEvent, state: T_State):
+#     gid = event.group_id
+#     nm = event.anonymous.json()
+#     data = eval(nm)
+#     flag = data['flag']
+#     # print(data)
+#     # print(flag)
+#     # print(gid)
+#     await nban.send('请不要打广告或者使用不良语言哦！消息已经被撤回，下不为例，禁言十分钟警告处理!!')
+#     await bot.set_group_anonymous_ban(group_id=gid, anonymous=nm, anonymous_flag=flag, duration=600)
+#
+#
+# # 撤回消息
+# che = on_keyword({'广告', '沙雕', '广告', 'md', '妈的',  '操你妈', '操你',} ,priority=60)
+#
+#
+# @che.handle()
+# async def c(bot: Bot, event: GroupMessageEvent, state: T_State):
+#     mid = event.message_id
+#     print(mid)
+#     await bot.delete_msg(message_id=mid)
 
 
 # # 踢人
@@ -299,15 +299,15 @@ async def s(bot: Bot, event: GroupMessageEvent, state: T_State):
     await bot.set_group_whole_ban(group_id=gid, enable=False)
 
 
-dian=on_keyword({'垃圾','广告','傻逼','草','cao','操'},priority=60)
-@dian.handle()
-async def h(bot: Bot, event: GroupMessageEvent):
-    mid=event.message_id
-    uid=event.user_id
-    gid=event.group_id
-    msg='这位小可爱，请不要说不良词汇，您的消息已经被撤回，请注意语言哦'
-    await bot.delete_msg(message_id=mid)
-    await bot.send_msg(user_id=uid,message=msg,group_id=gid)
+# dian=on_keyword({'垃圾','广告','傻逼','草','cao','操'},priority=60)
+# @dian.handle()
+# async def h(bot: Bot, event: GroupMessageEvent):
+#     mid=event.message_id
+#     uid=event.user_id
+#     gid=event.group_id
+#     msg='这位小可爱，请不要说不良词汇，您的消息已经被撤回，请注意语言哦'
+#     await bot.delete_msg(message_id=mid)
+#     await bot.send_msg(user_id=uid,message=msg,group_id=gid)
 
 dian=on_keyword({'帅哥','群主最帅','群主最美','群主最棒','我爱张杰'},priority=60)
 @dian.handle()

@@ -86,7 +86,8 @@ async def info_select(bot: Bot, event: Event):
     op_mysql = OperationMysql()
     user = op_mysql.search_one(sql_select)
     at_ = "[CQ:at,qq={}]".format(user_qq)
-    message = at_ +'\n' + '已连续签到 ' + str(user['count']) + ' 天' + '\n' + '金币有 ' + str(
+    uid = 'uid: '+ str(user['uid']) + '\n'
+    message = at_ +'\n' + uid + '已连续签到 ' + str(user['count']) + ' 天' + '\n' + '金币有 ' + str(
         user['integral']) + '\n' + '最后一次签到时间：' + str(user['last_insertDate'].strftime("%Y-%m-%d %H:%M:%S"))
     if not user==None:
         await bot.send(event, Message(message))
