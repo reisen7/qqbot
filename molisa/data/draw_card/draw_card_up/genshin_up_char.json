@@ -1,0 +1,66 @@
+{
+    "char": {
+        "title": "「叶落风随」",
+        "pool_img": "https:\/\/patchwiki.biligame.com\/images\/ys\/f\/f8\/427ehi5pnk4tvp8uxvv2m43fcek07u6.png",
+        "start_time": "2022-07-13T11:00:00",
+        "end_time": "2022-08-02T17:59:00",
+        "up_char": [
+            {
+                "name": "枫原万叶",
+                "star": 5,
+                "limited": false,
+                "zoom": 50.0
+            },
+            {
+                "name": "鹿野院平藏",
+                "star": 4,
+                "limited": false,
+                "zoom": 50.0
+            },
+            {
+                "name": "凝光",
+                "star": 4,
+                "limited": false,
+                "zoom": 50.0
+            },
+            {
+                "name": "托马",
+                "star": 4,
+                "limited": false,
+                "zoom": 50.0
+            }
+        ]
+    },
+    "arms": {
+        "title": "「闪焰的驻足」",
+        "pool_img": "https:\/\/patchwiki.biligame.com\/images\/ys\/4\/4f\/kxuwacyy6b0wwbugjru8fbecbdlhmst.png",
+        "start_time": "2022-07-13T11:00:00",
+        "end_time": "2022-08-02T17:59:00",
+        "up_char": [
+            {
+                "name": "可莉",
+                "star": 5,
+                "limited": false,
+                "zoom": 50.0
+            },
+            {
+                "name": "鹿野院平藏",
+                "star": 4,
+                "limited": false,
+                "zoom": 50.0
+            },
+            {
+                "name": "凝光",
+                "star": 4,
+                "limited": false,
+                "zoom": 50.0
+            },
+            {
+                "name": "托马",
+                "star": 4,
+                "limited": false,
+                "zoom": 50.0
+            }
+        ]
+    }
+}

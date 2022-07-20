@@ -1,0 +1,28 @@
+{
+    "char": {
+        "title": "沙洲引路人",
+        "pool_img": "https:\/\/ak.hycdn.cn\/announce\/images\/20220623\/79fb10c2a72c62023c64040d0676060a.jpg",
+        "start_time": "2022-07-05T16:00:00",
+        "end_time": "2022-07-19T03:59:00",
+        "up_char": [
+            {
+                "name": "多萝西",
+                "star": 6,
+                "limited": false,
+                "zoom": 0.5
+            },
+            {
+                "name": "承曦格雷伊",
+                "star": 5,
+                "limited": false,
+                "zoom": 0.5
+            },
+            {
+                "name": "白面鸮",
+                "star": 5,
+                "limited": false,
+                "zoom": 0.5
+            }
+        ]
+    }
+}

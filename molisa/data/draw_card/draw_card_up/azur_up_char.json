@@ -1,0 +1,59 @@
+{
+    "char": {
+        "title": "『轻量化复刻：蝶海梦花』重樱大型、「复刻：伊始之梦」、「建造支援·重樱」",
+        "pool_img": "",
+        "start_time": "2022-07-14T18:00:00",
+        "end_time": "2022-07-21T09:00:00",
+        "up_char": [
+            {
+                "name": "信浓",
+                "star": 5,
+                "limited": false,
+                "zoom": 1.2,
+                "type_": "正航"
+            },
+            {
+                "name": "凉月",
+                "star": 4,
+                "limited": false,
+                "zoom": 2.0,
+                "type_": "驱逐"
+            },
+            {
+                "name": "纪伊",
+                "star": 4,
+                "limited": false,
+                "zoom": 0.5,
+                "type_": "战列"
+            },
+            {
+                "name": "樫野",
+                "star": 3,
+                "limited": false,
+                "zoom": 2.5,
+                "type_": "运输"
+            },
+            {
+                "name": "千岁",
+                "star": 3,
+                "limited": false,
+                "zoom": 2.5,
+                "type_": "轻航"
+            },
+            {
+                "name": "千代田",
+                "star": 3,
+                "limited": false,
+                "zoom": 2.5,
+                "type_": "轻航"
+            },
+            {
+                "name": "熊野",
+                "star": 3,
+                "limited": false,
+                "zoom": 0.0,
+                "type_": "重巡"
+            }
+        ]
+    }
+}
