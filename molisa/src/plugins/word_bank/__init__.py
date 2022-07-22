@@ -144,13 +144,13 @@ async def wb_response( bot: Bot, event: MessageEvent, city: Message = Arg()):
     flag = False  # 判断是否合法TRUE表示违法
     isImg = False
     isText = False
-    city = str(city).replace("\n", '').replace("\r", '')
     if 'image' in str(city):
         isImg = True
+        city = str(city).replace("\n", '').replace("\r", '')
         access_t = await accessisUse()
         flag = await isHEfa(city, access_t)
 
-    if not('[' in city and ']' in city):
+    if not('CQ:' in city):
         isText = True
         access_t = await accessisUse()
         w = await testisHEFA(city=city, access_t=access_t)
@@ -161,8 +161,8 @@ async def wb_response( bot: Bot, event: MessageEvent, city: Message = Arg()):
         await bot.send(event, message='图片违规,请重新发送')
     elif flag == True and  isText ==True:
         await bot.send(event, message='文本违规,请重新发送')
-    elif flag ==False and isImg ==False and isText ==False:
-        await bot.send(event, message='暂不支持这种格式哦，请联系我主人')
+    # elif flag ==False and isImg ==False and isText ==False:
+    #     await bot.send(event, message='暂不支持这种格式哦，请联系我主人')
     else:
         message = word + city
         print(message)

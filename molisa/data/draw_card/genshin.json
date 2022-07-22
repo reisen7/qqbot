@@ -41,17 +41,17 @@
         "星级": 5,
         "常驻\/限定": "限定UP"
     },
-    "五郎": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/d\/d4\/8ok291j1owt70axz3l8bxlj51w9rvl5.png",
-        "名称": "五郎",
-        "星级": 4,
-        "常驻\/限定": "常驻UP"
-    },
     "荒泷一斗": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/5\/55\/5sdwiryq6bjb3tjxxtg1e8njdmggirp.png",
         "名称": "荒泷一斗",
         "星级": 5,
         "常驻\/限定": "限定UP"
+    },
+    "五郎": {
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/d\/d4\/8ok291j1owt70axz3l8bxlj51w9rvl5.png",
+        "名称": "五郎",
+        "星级": 4,
+        "常驻\/限定": "常驻UP"
     },
     "托马": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/f\/f1\/4npwdwlbof3hff5s7yyoxn5afmyo6bs.png",
@@ -83,17 +83,17 @@
         "星级": 4,
         "常驻\/限定": "常驻UP"
     },
-    "早柚": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/a\/a2\/g52x6102jce31mjisvtsormdvbvdp1s.png",
-        "名称": "早柚",
-        "星级": 4,
-        "常驻\/限定": "常驻UP"
-    },
     "宵宫": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/b\/bc\/pz347ut911ktapyemd3ewiyx1dwv3te.png",
         "名称": "宵宫",
         "星级": 5,
         "常驻\/限定": "限定UP"
+    },
+    "早柚": {
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/a\/a2\/g52x6102jce31mjisvtsormdvbvdp1s.png",
+        "名称": "早柚",
+        "星级": 4,
+        "常驻\/限定": "常驻UP"
     },
     "神里绫华": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/4\/4c\/8h931m3f8nkkvjfq3f03c8a9h0f6x69.png",
@@ -161,17 +161,17 @@
         "星级": 5,
         "常驻\/限定": "限定UP"
     },
-    "迪奥娜": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/8\/8e\/ebp74g68onexgkc2xsjuornx2j6bowp.png",
-        "名称": "迪奥娜",
-        "星级": 4,
-        "常驻\/限定": "常驻UP"
-    },
     "达达利亚": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/a\/af\/4v48u6t4v9mfnwmabch9ojskqa1x61a.png",
         "名称": "达达利亚",
         "星级": 5,
         "常驻\/限定": "限定UP"
+    },
+    "迪奥娜": {
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/8\/8e\/ebp74g68onexgkc2xsjuornx2j6bowp.png",
+        "名称": "迪奥娜",
+        "星级": 4,
+        "常驻\/限定": "常驻UP"
     },
     "可莉": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/b\/b1\/rlnhn26076peuvah42o85o2pha5m7am.png",
@@ -184,6 +184,30 @@
         "名称": "温迪",
         "星级": 5,
         "常驻\/限定": "限定UP"
+    },
+    "诺艾尔": {
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/1\/1e\/q7e7j4ybveu9vpezgvjogwpmfzz1mm2.png",
+        "名称": "诺艾尔",
+        "星级": 4,
+        "常驻\/限定": "常驻UP"
+    },
+    "凯亚": {
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/e\/e5\/knnismq9um424psahpu5vag0ysu3jab.png",
+        "名称": "凯亚",
+        "星级": 4,
+        "常驻\/限定": "常驻UP"
+    },
+    "莫娜": {
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/c\/ce\/refnobe859mskudq9i634djaniepwvt.png",
+        "名称": "莫娜",
+        "星级": 5,
+        "常驻\/限定": "常驻UP"
+    },
+    "班尼特": {
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/a\/a0\/nd8jx8novy6974e5ez7bz9la04vajw8.png",
+        "名称": "班尼特",
+        "星级": 4,
+        "常驻\/限定": "常驻UP"
     },
     "芭芭拉": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/4\/4f\/nsllwey2yb8na9uab5vov22lo0zu1tf.png",
@@ -278,30 +302,6 @@
     "砂糖": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/c\/cc\/rhbp5t3iyzpsk2dc34kv18yem0nlmzo.png",
         "名称": "砂糖",
-        "星级": 4,
-        "常驻\/限定": "常驻UP"
-    },
-    "诺艾尔": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/1\/1e\/q7e7j4ybveu9vpezgvjogwpmfzz1mm2.png",
-        "名称": "诺艾尔",
-        "星级": 4,
-        "常驻\/限定": "常驻UP"
-    },
-    "凯亚": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/e\/e5\/knnismq9um424psahpu5vag0ysu3jab.png",
-        "名称": "凯亚",
-        "星级": 4,
-        "常驻\/限定": "常驻UP"
-    },
-    "莫娜": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/c\/ce\/refnobe859mskudq9i634djaniepwvt.png",
-        "名称": "莫娜",
-        "星级": 5,
-        "常驻\/限定": "常驻UP"
-    },
-    "班尼特": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/ys\/a\/a0\/nd8jx8novy6974e5ez7bz9la04vajw8.png",
-        "名称": "班尼特",
         "星级": 4,
         "常驻\/限定": "常驻UP"
     }

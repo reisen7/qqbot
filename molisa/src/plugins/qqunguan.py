@@ -53,7 +53,9 @@ async def handle_first_receive(bot: Bot, event: GroupIncreaseNoticeEvent, state:
             }
         }
     ]
-    await bot.send(event=event, message=Message(str(aiocqhttp.Message(rely))))
+    print(event.user_id)
+    if not event.user_id == event.self_id:
+        await bot.send(event=event, message=Message(str(aiocqhttp.Message(rely))))
 
 
 # 检测离开群成员

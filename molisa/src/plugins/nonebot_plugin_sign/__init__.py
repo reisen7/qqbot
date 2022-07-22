@@ -33,8 +33,9 @@ async def sign_user(bot: Bot, event: Event):
            #
            # logger.info("成功")
            # logger.info("已经签过了")
+           uid = 'uid: ' + str(user['uid']) + '\n'
            at_ = "[CQ:at,qq={}]".format(user_qq)
-           message = at_ + '今天已经签过到了哦~'+'\n'+'发送‘金币获取’查看获取金币的方法'
+           message = at_ +'\n'+ uid + '今天已经签过到了哦~'+'\n'+'发送‘金币获取’查看获取金币的方法'
            await bot.send(event, Message(message))
 
        else:
@@ -68,8 +69,9 @@ async def success(user_qq: str):
     op_mysql = OperationMysql()
     user = op_mysql.search_one(sql_select)
     at_ = "[CQ:at,qq={}]".format(user_qq)
+    uid = 'uid: ' + str(user['uid']) + '\n'
     logger.info(user['last_insertDate'])
-    message = at_ + '签到成功' +'\n'+ '已连续签到 ' + str(user['count']) +' 天'+'\n'+'金币有 '+ str(user['integral']) +'\n'+'最后一次签到时间：'+str(user['last_insertDate'].strftime("%Y-%m-%d %H:%M:%S"))
+    message = at_ + '签到成功'+'\n'+ uid + '已连续签到 ' + str(user['count']) +' 天'+'\n'+'金币有 '+ str(user['integral']) +'\n'+'最后一次签到时间：'+str(user['last_insertDate'].strftime("%Y-%m-%d %H:%M:%S"))
     message = message + '\n' + '发送‘个人信息’即可查看'
 
     return message

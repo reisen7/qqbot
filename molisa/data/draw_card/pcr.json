@@ -294,15 +294,15 @@
         "名称": "铃（游骑兵）",
         "星级": 3
     },
-    "香织（夏日）": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/4\/45\/m9tc6psakryc1eji76xj9e2guk7lw4q.png\/120px-Icon_unit_110511.png",
-        "名称": "香织（夏日）",
-        "星级": 1
-    },
     "伊莉亚": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/e\/e2\/10hawbdrcs5cv32ynab7ofxw2bfutrg.png\/120px-Icon_unit_104431.png",
         "名称": "伊莉亚",
         "星级": 3
+    },
+    "香织（夏日）": {
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/4\/45\/m9tc6psakryc1eji76xj9e2guk7lw4q.png\/120px-Icon_unit_110511.png",
+        "名称": "香织（夏日）",
+        "星级": 1
     },
     "咲恋": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/8\/8c\/dy0rtln3fvhxkkqfxsnbnws61k8qqjh.png\/120px-Icon_unit_102831.png",
@@ -314,14 +314,14 @@
         "名称": "环奈",
         "星级": 3
     },
-    "杏奈": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/7\/72\/edy145bksvw972yhfpfgp8qbquhsi1j.png\/120px-Icon_unit_100931.png",
-        "名称": "杏奈",
-        "星级": 3
-    },
     "忍（万圣节）": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/8\/80\/hwmi41hx1nqfpn2yru2v3g4xi3xo377.png\/120px-Icon_unit_108131.png",
         "名称": "忍（万圣节）",
+        "星级": 3
+    },
+    "杏奈": {
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/7\/72\/edy145bksvw972yhfpfgp8qbquhsi1j.png\/120px-Icon_unit_100931.png",
+        "名称": "杏奈",
         "星级": 3
     },
     "七七香（夏日）": {
@@ -449,15 +449,15 @@
         "名称": "璃乃",
         "星级": 3
     },
-    "铃奈": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/3\/3d\/sptz95hzsgb34gggpw5gcq60fokjr7h.png\/120px-Icon_unit_101611.png",
-        "名称": "铃奈",
-        "星级": 2
-    },
     "铃奈（夏日）": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/7\/76\/g8rhdnxpl6uh4atyfxze6xa6nw5ibmn.png\/120px-Icon_unit_110031.png",
         "名称": "铃奈（夏日）",
         "星级": 3
+    },
+    "铃奈": {
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/3\/3d\/sptz95hzsgb34gggpw5gcq60fokjr7h.png\/120px-Icon_unit_101611.png",
+        "名称": "铃奈",
+        "星级": 2
     },
     "栞": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/b\/bc\/kwa1savu5wkp45wzp5mns0kcjsrqdtr.png\/120px-Icon_unit_103811.png",
@@ -494,6 +494,11 @@
         "名称": "爱蜜莉雅",
         "星级": 3
     },
+    "香澄": {
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/f\/f1\/btd4p36c1tzt4aqgo4lfwqjst6mvjtk.png\/120px-Icon_unit_101431.png",
+        "名称": "香澄",
+        "星级": 3
+    },
     "璃乃（仙境）": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/9\/9b\/67pi096tkm6ctdk2xg6irem15ei2quk.png\/120px-Icon_unit_112931.png",
         "名称": "璃乃（仙境）",
@@ -502,11 +507,6 @@
     "香澄（魔法少女）": {
         "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/d\/d6\/ekorqixm5il3hdtczwqw2mohbmpzujq.png\/120px-Icon_unit_112231.png",
         "名称": "香澄（魔法少女）",
-        "星级": 3
-    },
-    "香澄": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/f\/f1\/btd4p36c1tzt4aqgo4lfwqjst6mvjtk.png\/120px-Icon_unit_101431.png",
-        "名称": "香澄",
         "星级": 3
     },
     "美里": {
@@ -985,7 +985,7 @@
         "星级": 3
     },
     "优衣（夏日）": {
-        "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/e\/ef\/sc9alo3pu476fwoeyrxxap5j96evas0.png\/120px-Icon_unit_122631.png",
+        "头像": "https:\/\/patchwiki.biligame.com\/images\/pcr\/thumb\/e\/ef\/6zsjk0jogkekcdmp5q79hv2nw5vca9l.png\/120px-Icon_unit_122631.png",
         "名称": "优衣（夏日）",
         "星级": 3
     }

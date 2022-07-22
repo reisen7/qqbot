@@ -22,10 +22,17 @@
                 "\r\n[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-839396399-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3]",
                 "\r\n[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-2250446380-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3]",
                 "[CQ:image,file=4c3afcebfa61df0b686a3b2b9b0ef65e.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-133339891-4C3AFCEBFA61DF0B686A3B2B9B0EF65E/0?term=3]",
-                "你好[CQ:image,file=2db2d741125a9360c8f3d5b4038c0f65.image,url=https://c2cpicdw.qpic.cn/offpic_new/0/328170849-4257912878-2DB2D741125A9360C8F3D5B4038C0F65/0?term=3]"
+                "你好[CQ:image,file=2db2d741125a9360c8f3d5b4038c0f65.image,url=https://c2cpicdw.qpic.cn/offpic_new/0/328170849-4257912878-2DB2D741125A9360C8F3D5B4038C0F65/0?term=3]",
+                "我不好"
             ],
             "包": [
                 "维尼"
+            ],
+            "我的头像": [
+                "[CQ:image,file=33a501d3c7eedc30296da0812a1a0972.image,url=https://c2cpicdw.qpic.cn/offpic_new/328170849//328170849-2454302609-33A501D3C7EEDC30296DA0812A1A0972/0?term=3]"
+            ],
+            "在干嘛": [
+                "在打你"
             ]
         },
         "695392621": {
@@ -194,6 +201,18 @@
             ],
             "黑角": [
                 "[CQ:image,file=1e1d0e5d4d63f2fc6d8b9d50a20abffb.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/993105896-2390736123-1E1D0E5D4D63F2FC6D8B9D50A20ABFFB/0?term=3,subType=0]"
+            ],
+            "丁真": [
+                "[CQ:xml,data=<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><msg serviceID=\"1\" templateID=\"-1\" action=\"web\" brief=\"丁真已进群监听聊天\" sourceMsgId=\"0\" url=\"\" flag=\"0\" adverSign=\"0\" multiMsgFlag=\"0\"><item layout=\"2\" advertiser_id=\"0\" aid=\"0\"><picture cover=\"http://gchat.qpic.cn/gchatpic_new/0/-0-7A7BA9804F0A81730A403EA3E1BB48F8/0\" w=\"0\" h=\"0\" /><title>丁真已进群监听聊天</title><summary>请注意聊天言辞</summary></item><source name=\"\" icon=\"\" action=\"\" appid=\"0\" /></msg>,resid=1]"
+            ],
+            "开启监听": [
+                "[CQ:xml,data=<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><msg serviceID=\"1\" templateID=\"-1\" action=\"web\" brief=\"小奏已进群监听聊天\" sourceMsgId=\"0\" url=\"\" flag=\"0\" adverSign=\"0\" multiMsgFlag=\"0\"><item layout=\"2\" advertiser_id=\"0\" aid=\"0\"><picture cover=\"https://gchat.qpic.cn/gchatpic_new/328170849/779624805-2442489698-33A501D3C7EEDC30296DA0812A1A0972/0\" w=\"0\" h=\"0\" /><title>小奏已进群监听聊天</title><summary>请注意聊天言辞</summary></item><source name=\"\" icon=\"\" action=\"\" appid=\"0\" /></msg>,resid=1]"
+            ],
+            "进群监听": [
+                "&#91;CQ:xml,data=<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><msg serviceID=\"1\" templateID=\"-1\" action=\"web\" brief=\"小奏已进群监听聊天\" sourceMsgId=\"0\" url=\"\" flag=\"0\" adverSign=\"0\" multiMsgFlag=\"0\"><item layout=\"2\" advertiser_id=\"0\" aid=\"0\"><picture cover=\"https://gchat.qpic.cn/gchatpic_new/328170849/993105896-2519025998-33A501D3C7EEDC30296DA0812A1A0972/0\\\" w=\"0\" h=\"0\" /><title>小奏已进群监听聊天</title><summary>请注意聊天言辞</summary></item><source name=\"\" icon=\"\" action=\"\" appid=\"0\" /></msg>,resid=1&#93;"
+            ],
+            "笔记": [
+                "常用的视图解析器[CQ:image,file=ff71688522b8196cf1c6f4eb65d9cb70.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/993105896-2299947547-FF71688522B8196CF1C6F4EB65D9CB70/0?term=3,subType=0]BeanNameViewResolver:可以生成Excel,但需要自已定义视图类；InternalResourceViewResolver:主要用来生成JSPJasperReportsViewResolver:生成报表FreeMakerViewResolver:模版引擎；可以用来生成各种类型的文件（java,xml,html）"
             ]
         },
         "1062564756": {
@@ -246,13 +265,26 @@
                 "[CQ:image,file=4e7a1fc811054810a0b8e8d0b0311759.image,subType=1]",
                 "[CQ:image,file=ab071a750d94d8dab296823a05f926d6.image,subType=1]",
                 "[CQ:image,file=3de3d29427802e195950edaab2bf3d6b.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-2479233756-3DE3D29427802E195950EDAAB2BF3D6B/0?term=3,subType=0]",
-                "[CQ:image,file=eee923732ae6510824e4bf5385f3844a.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-2755053557-EEE923732AE6510824E4BF5385F3844A/0?term=3,subType=0]"
+                "[CQ:image,file=eee923732ae6510824e4bf5385f3844a.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-2755053557-EEE923732AE6510824E4BF5385F3844A/0?term=3,subType=0]",
+                "[CQ:image,file=42c83248bd43930153b3b7d11d5de581.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-3190356443-42C83248BD43930153B3B7D11D5DE581/0?term=3,subType=1]"
             ],
             "视频": [
                 "[CQ:video,file=be0a9d9621b0dfdee3d230225f208a27.video,url=http://111.30.174.153:80/qqdownload?ver=537097188&amp;rkey=3081f90201010481f13081ee020101020100020465cc95a50481a2333034663032303130303034333433303332303230313030303230343031313362333838303230333761316166663032303463333939303230393032303436326432323831383034313062653061396439363231623064666465653364323330323235663230386132373032303130303032303130303034313430303030303030383636363936633635373437393730363530303030303030343331333033303331020462d2281804350000000866696c657479706500000004313030330000000b646f776e656e63727970740000000130000000047175696300000001300400&amp;filetype=1003&amp;videotype=1&amp;subvideotype=0&amp;term=unknow]"
             ],
             "成员生日": [
                 "[CQ:image,file=44a905e7754862691fd8006358446f2f.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-2620333753-44A905E7754862691FD8006358446F2F/0?term=3,subType=0]"
+            ],
+            "v50": [
+                "[CQ:image,file=1f96a5f91549aa96938fee7b3e97fec0.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-3141138770-1F96A5F91549AA96938FEE7B3E97FEC0/0?term=3,subType=0]"
+            ],
+            "疯狂星期四": [
+                "[CQ:image,file=1f96a5f91549aa96938fee7b3e97fec0.image,url=https://gchat.qpic.cn/gchatpic_new/2337963379/1062564756-2803571730-1F96A5F91549AA96938FEE7B3E97FEC0/0?term=3,subType=0]"
+            ],
+            "丁真": [
+                "[CQ:xml,data=<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><msg serviceID=\"1\" templateID=\"-1\" action=\"web\" brief=\"丁真已进群监听聊天\" sourceMsgId=\"0\" url=\"\" flag=\"0\" adverSign=\"0\" multiMsgFlag=\"0\"><item layout=\"2\" advertiser_id=\"0\" aid=\"0\"><picture cover=\"http://gchat.qpic.cn/gchatpic_new/0/-0-7A7BA9804F0A81730A403EA3E1BB48F8/0\" w=\"0\" h=\"0\" /><title>丁真已进群监听聊天</title><summary>请注意聊天言辞</summary></item><source name=\"\" icon=\"\" action=\"\" appid=\"0\" /></msg>,resid=1]"
+            ],
+            "开启监听": [
+                "[CQ:xml,data=<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><msg serviceID=\"1\" templateID=\"-1\" action=\"web\" brief=\"小奏已进群监听聊天\" sourceMsgId=\"0\" url=\"\" flag=\"0\" adverSign=\"0\" multiMsgFlag=\"0\"><item layout=\"2\" advertiser_id=\"0\" aid=\"0\"><picture cover=\"https://gchat.qpic.cn/gchatpic_new/328170849/779624805-2442489698-33A501D3C7EEDC30296DA0812A1A0972/0\" w=\"0\" h=\"0\" /><title>小奏已进群监听聊天</title><summary>请注意聊天言辞</summary></item><source name=\"\" icon=\"\" action=\"\" appid=\"0\" /></msg>,resid=1]"
             ]
         },
         "822492001": {
@@ -285,6 +317,12 @@
             ],
             "头像": [
                 "\r\n[CQ:image,file=33a501d3c7eedc30296da0812a1a0972.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/779624805-3130063988-33A501D3C7EEDC30296DA0812A1A0972/0?term=3,subType=0]"
+            ],
+            "xml": [
+                "&#91;CQ:xml,data=<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><msg serviceID=\"1\" templateID=\"-1\" action=\"web\" brief=\"小奏已进群监听聊天\" sourceMsgId=\"0\" url=\"\" flag=\"0\" adverSign=\"0\" multiMsgFlag=\"0\"><item layout=\"2\" advertiser_id=\"0\" aid=\"0\"><picture cover=\"https://gchat.qpic.cn/gchatpic_new/328170849/993105896-2519025998-33A501D3C7EEDC30296DA0812A1A0972/0?term=3,subType=0\" w=\"0\" h=\"0\" /><title>小奏已进群监听聊天</title><summary>请注意聊天言辞</summary></item><source name=\"\" icon=\"\" action=\"\" appid=\"0\" /></msg>,resid=1&#93;"
+            ],
+            "开启监听": [
+                "[CQ:xml,data=<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><msg serviceID=\"1\" templateID=\"-1\" action=\"web\" brief=\"小奏已进群监听聊天\" sourceMsgId=\"0\" url=\"\" flag=\"0\" adverSign=\"0\" multiMsgFlag=\"0\"><item layout=\"2\" advertiser_id=\"0\" aid=\"0\"><picture cover=\"https://gchat.qpic.cn/gchatpic_new/328170849/779624805-2442489698-33A501D3C7EEDC30296DA0812A1A0972/0\" w=\"0\" h=\"0\" /><title>小奏已进群监听聊天</title><summary>请注意聊天言辞</summary></item><source name=\"\" icon=\"\" action=\"\" appid=\"0\" /></msg>,resid=1]"
             ]
         },
         "583932828": {
@@ -293,6 +331,26 @@
             ],
             "小奏": [
                 "爸爸"
+            ]
+        },
+        "1044625078": {
+            "本群最杂种的人": [
+                "吴宗宴"
+            ],
+            "本群谁最该死": [
+                "瘟疫康和他的标子码"
+            ],
+            "本群最大弱智": [
+                "林子恒"
+            ]
+        },
+        "742672752": {
+            "笔记": [
+                "常用的视图解析器[CQ:image,file=880d25aedd3b1e958dbd77871b23a181.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/742672752-2625358697-880D25AEDD3B1E958DBD77871B23A181/0?term=3,subType=0]BeanNameViewResolver:可以生成Excel,但需要自已定义视图类；InternalResourceViewResolver:主要用来生成JSPJasperReportsViewResolver:生成报表FreeMakerViewResolver:模版引擎；可以用来生成各种类型的文件（java,xml,html）",
+                "@Controller注解的使用步骤（1）在相应的类上标注@Controller注解。（2）在Spring MVC的配置文件中添加相应的扫描配置信息。首先需要在配置文件中引入context名称空间的配置，然后使用context:component-scan元素指定需要扫描的类包",
+                "@RequestParam注解及其属性作用 @RequestParam注解主要用于对请求中的参数进行定义，多用于在请求参数名与方法形参名不一致时的参数间接绑定。在使用时可以指定他的4个属性，具体如下：（1）value：name属性的别名，这里指参数的名字，即入参的请求参数名字，如果只使用vaule属性，则可以省略value属性名。（2）name：用于指定请求头绑定的名称。（3）required ：用于指定参数是否必须，默认是true，表示请求中一定要有相应的参数。（4）defaultValue：默认值，表示如果请求中没有同名参数时的默认值。",
+                "ajax 的 readyState 有哪几个状态，含义分别是什么？状态有0-40：XMLHttpRequest对象已经创建完成，此时还没有调用open1.此阶段使用open方法对XMLHttpRequest进行初始化，设置请求的方式，url请求头等，在调用send方法后，状态的值仍然是1,2.服务器响应成功，响应头已经被前端接受。可以通过XMLHttpRequest.getAllReaponse获取。 responseText为空3.部分数据已经可以获取了， responseText已经有部分数据了4.请求操作完成，响应数据全部接收完毕。注意 2 3 4 这三种状态，只能在 onreadystatechange 会调用中才可以获取到",
+                "POJO类型绑定                                                                           （1）如果查询条件参数是包装类的直接基本属性，则参数名直接用对应的属性名，如上面代码中的ordersId；\r\n（2）如果查询条件参数是包装类中POJO的子属性，则参数名必须为“对象.属性”，其中“对象”要和包装POJO中的对象属性名称一致，“属性”要和包装POJO中的对象子属性一致。"
             ]
         }
     },
