@@ -32,7 +32,7 @@ async def j(bot: Bot, event: Event, state: T_State):
 
 
     if user:
-        if user['integral'] == 0:
+        if user['integral'] <= 0:
             await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
 
         else:
@@ -69,7 +69,7 @@ async def qian():
     return tu
 
 
-yulu = on_command('cos', aliases={"烧鸡", "美少女", "涩图", "色图"}, rule=to_me())
+yulu = on_command('烧鸡', aliases={ "美少女", "涩图", "色图"}, rule=to_me())
 
 
 @yulu.handle()
@@ -84,7 +84,7 @@ async def j(bot: Bot, event: Event, state: T_State):
     user = op_mysql.search_one(sql_select)
 
     if user:
-        if user['integral'] == 0:
+        if user['integral'] <= 0:
             await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
 
         else:
@@ -159,186 +159,249 @@ async def heisi():
     return str(aiocqhttp.Message(repy))
 
 
-yulu = on_command('肉丝', rule=to_me())
+yulu = on_command('湿身', rule=to_me())
 
 
 @yulu.handle()
 async def j(bot: Bot, event: Event, state: T_State):
-    msg = await rousi()
-    print(msg)
-    try:
-        await yulu.send(Message(msg))
 
-    except CQHttpError:
-        pass
+    user_qq = event.get_user_id()
+    sql = 'select * from sign where user_qq = '
+    # logger.info(sql+user_qq)
+    sql_select = sql+user_qq
+
+    op_mysql = OperationMysql()
+    user = op_mysql.search_one(sql_select)
+
+
+    if user:
+        if user['integral'] <= 0:
+            await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
+
+        else:
+
+            try:
+
+                msg = await rousi()
+                print(msg)
+                await yulu.send(Message('金币-1'+msg))
+                sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
+                    user_qq)
+
+                op_mysql = OperationMysql()
+                op_mysql.updata_one(sql_update)
+
+            except CQHttpError:
+                await yulu.send(Message('发送失败，请再试一次'))
+
+    else:
+        await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
+    
+    
 
 
 async def rousi():
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3875.400 QQBrowser/10.8.4492.400'}
-    wz = 'https://www.siwashi.com/rosi'
-    # 设置页数
-    a = 20
-    y = 1
-    tmp = random.randint(2, 19)
-    print(tmp)
-    for itme in range(1, a + 1):
-        url = wz
-        # print('正在下载第%s页图片' % y)
-        # print(url)
-        y += 1
-        # 开始解析网页
-        proxies = {"http": None, "https": None}
-        res = requests.get(url, headers=headers, verify=False, proxies=proxies)
-        img = re.findall('src=".*?"', res.text)
-        # 开始下载图片
-        # print(img)
-        x = 1
-        i = 0
-        if y == tmp:
-            while (1 > 0):  # 对查找出来的大量结果进行循环，一个一个处理
-                i=i+1
-                if(i==20):
-                    imgtu = '查找失败'
-                    break
-                x = random.randint(1, len(img) - 1)
-                imgurl = re.findall("https.*webp", img[x])  # 把“img” 标签里图片的 地址给提取出来
-                # imgtu=str(imgurl)
-                # print(imgtu)
-                print(x)
-                imgtu = str(imgurl)
-                imgtu = imgtu.replace("['", "")
-                imgtu = imgtu.replace("']", "")
-                if (imgtu != '[]' and int(len(imgtu)) > 71):
-                    break
+    url = "https://api.r10086.com/img-api.php?type=P%E7%AB%99%E7%B3%BB%E5%88%972"
+    proxies = {"http": None, "https": None}
+    resp = requests.get(url=url, verify=False, proxies=proxies).url
+    # x = resp.split(',')
+    # y = x[1].split('"')
+    # # test = resp['imgurl']
+    # test = y[3].replace("\\", "")
 
-    test = imgtu
-    test = test.replace(".webp", ".jpg")
-    if (test == "查找失败"):
-        return test;
-    tu = f"[CQ:image,file={test}]"
-    return tu
+    repy = [
+        {
+            "type": "image",
+            "data": {
+                "file": resp
+            }
+        }
+    ]
+
+    return str(aiocqhttp.Message(repy))
 
 
-yulu = on_command('白丝', priority=0)
+yulu = on_command('女同', priority=0)
 
 
 @yulu.handle()
 async def j(bot: Bot, event: Event, state: T_State):
-    msg = await baisi()
-    print(msg)
-    try:
-        await yulu.send(Message(msg))
 
-    except CQHttpError:
-        pass
+    user_qq = event.get_user_id()
+    sql = 'select * from sign where user_qq = '
+    # logger.info(sql+user_qq)
+    sql_select = sql+user_qq
+
+    op_mysql = OperationMysql()
+    user = op_mysql.search_one(sql_select)
+
+
+    if user:
+        if user['integral'] <= 0:
+            await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
+
+        else:
+
+            try:
+
+                msg = await baisi()
+                print(msg)
+                await yulu.send(Message('金币-1'+msg))
+                sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
+                    user_qq)
+
+                op_mysql = OperationMysql()
+                op_mysql.updata_one(sql_update)
+
+            except CQHttpError:
+                await yulu.send(Message('发送失败，请再试一次'))
+
+    else:
+        await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
+
 
 
 async def baisi():
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3875.400 QQBrowser/10.8.4492.400'}
+    url = "https://api.r10086.com/img-api.php?type=%E6%A9%98%E9%87%8C%E6%A9%98%E6%B0%94%E6%A8%AA%E5%B1%8F%E7%B3%BB%E5%88%971"
+    proxies = {"http": None, "https": None}
+    resp = requests.get(url=url, verify=False, proxies=proxies).url
+    # x = resp.split(',')
+    # y = x[1].split('"')
+    # # test = resp['imgurl']
+    # test = y[3].replace("\\", "")
 
-    wz = 'https://www.siwashi.com/baisi'
-    # 设置页数
-    a = 20
-    y = 1
-    tmp = random.randint(2,19)
-    print(tmp)
-    for itme in range(1, a + 1):
-        url = wz
-        # print('正在下载第%s页图片' % y)
-        # print(url)
-        y += 1
-        # 开始解析网页
-        proxies = {"http": None, "https": None}
-        res = requests.get(url, headers=headers, verify=False, proxies=proxies)
-        img = re.findall('src=".*?"', res.text)
-        # 开始下载图片
-        # print(img)
-        x = 1
-        i = 0
-        if y == tmp:
-            while (1 > 0):  # 对查找出来的大量结果进行循环，一个一个处理
-                i=i+1
-                if(i==20):
-                    imgtu = '查找失败'
-                    break
-                x = random.randint(1, len(img) - 1)
-                imgurl = re.findall("https.*webp", img[x])  # 把“img” 标签里图片的 地址给提取出来
-                # imgtu=str(imgurl)
-                # print(imgtu)
-                print(x)
-                imgtu = str(imgurl)
-                imgtu = imgtu.replace("['", "")
-                imgtu = imgtu.replace("']", "")
-                if (imgtu != '[]' and int(len(imgtu)) > 71):
-                    break
+    repy = [
+        {
+            "type": "image",
+            "data": {
+                "file": resp
+            }
+        }
+    ]
 
-    test = imgtu
-    test = test.replace(".webp", ".jpg")
-    if (test == "查找失败"):
-        return test;
-    tu = f"[CQ:image,file={test}]"
-    return tu
+    return str(aiocqhttp.Message(repy))
 
 
-yulu = on_command('其他丝袜',priority=0)
+yulu = on_command('其他',priority=0)
 
 
 @yulu.handle()
 async def j(bot: Bot, event: Event, state: T_State):
-    msg = await qitas()
-    print(msg)
-    try:
-        await yulu.send(Message(msg))
 
-    except CQHttpError:
-        pass
+    user_qq = event.get_user_id()
+    sql = 'select * from sign where user_qq = '
+    # logger.info(sql+user_qq)
+    sql_select = sql+user_qq
+
+    op_mysql = OperationMysql()
+    user = op_mysql.search_one(sql_select)
+
+
+    if user:
+        if user['integral'] <= 0:
+            await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
+
+        else:
+
+            try:
+
+                msg = await qitas()
+                print(msg)
+                await yulu.send(Message('金币-1'+msg))
+                sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
+                    user_qq)
+
+                op_mysql = OperationMysql()
+                op_mysql.updata_one(sql_update)
+
+            except CQHttpError:
+                await yulu.send(Message('发送失败，请再试一次'))
+
+    else:
+        await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
+
+
 
 
 async def qitas():
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3875.400 QQBrowser/10.8.4492.400'}
-    wz = 'https://www.siwashi.com/other'
-    # 设置页数
-    a = 20
-    y = 1
-    tmp = random.randint(2, 19)
-    print("tmp: "+str(tmp))
-    for itme in range(1, a + 1):
-        url = wz
-        # print('正在下载第%s页图片' % y)
-        # print(url)
-        y += 1
-        # 开始解析网页
-        proxies = {"http": None, "https": None}
-        res = requests.get(url, headers=headers, verify=False, proxies=proxies)
-        img = re.findall('src=".*?"', res.text)
-        # 开始下载图片
-        # print(img)
-        i = 0
-        if y == tmp:
-            while (1 > 0):  # 对查找出来的大量结果进行循环，一个一个处理
-                i = i+1
-                if(i==20):
-                    imgtu='查找失败'
-                    break
-                x = random.randint(1, len(img) - 1)
-                print(img[i])
-                imgurl = re.findall("https.*webp", img[x])  # 把“img” 标签里图片的 地址给提取出来
-                # imgtu=str(imgurl)
-                # print(imgtu)
-                print("x: "+str(x))
-                imgtu = str(imgurl)
-                imgtu = imgtu.replace("['", "")
-                imgtu = imgtu.replace("']", "")
-                print("img"+ imgtu)
-                if ((imgtu != '[]' )and int(len(imgtu)) > 71):
-                    break
+    url = "https://api.r10086.com/img-api.php?type=CG%E7%B3%BB%E5%88%973"
+    proxies = {"http": None, "https": None}
+    resp = requests.get(url=url, verify=False, proxies=proxies).url
+    # x = resp.split(',')
+    # y = x[1].split('"')
+    # # test = resp['imgurl']
+    # test = y[3].replace("\\", "")
 
-    test = imgtu
-    test = test.replace(".webp", ".jpg")
-    if(test =="查找失败"):
-        return test;
-    tu = f"[CQ:image,file={test}]"
-    return tu
+    repy = [
+        {
+            "type": "image",
+            "data": {
+                "file": resp
+            }
+        }
+    ]
+
+    return str(aiocqhttp.Message(repy))
+
+
+
+yulu = on_command('cos')
+
+
+@yulu.handle()
+async def j(bot: Bot, event: Event, state: T_State):
+
+    user_qq = event.get_user_id()
+    sql = 'select * from sign where user_qq = '
+    # logger.info(sql+user_qq)
+    sql_select = sql+user_qq
+
+    op_mysql = OperationMysql()
+    user = op_mysql.search_one(sql_select)
+
+
+    if user:
+        if user['integral'] <= 0:
+            await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
+
+        else:
+
+            try:
+
+                msg = await cos()
+                print(msg)
+                await yulu.send(Message('金币-1'+msg))
+                sql_update = 'update sign set  integral = integral -' + '1' + ' where user_qq =' + str(
+                    user_qq)
+
+                op_mysql = OperationMysql()
+                op_mysql.updata_one(sql_update)
+
+            except CQHttpError:
+                await yulu.send(Message('发送失败，请再试一次'))
+
+    else:
+        await yulu.send(Message('你的金币不足哦~快向小奏签到获取吧'))
+
+
+
+
+async def cos():
+    url = "https://api.r10086.com/img-api.php?type=%E6%97%A5%E6%9C%ACCOS%E4%B8%AD%E5%9B%BDCOS"
+    proxies = {"http": None, "https": None}
+    resp = requests.get(url=url, verify=False, proxies=proxies).url
+    # x = resp.split(',')
+    # y = x[1].split('"')
+    # # test = resp['imgurl']
+    # test = y[3].replace("\\", "")
+
+    repy = [
+        {
+            "type": "image",
+            "data": {
+                "file": resp
+            }
+        }
+    ]
+
+    return str(aiocqhttp.Message(repy))

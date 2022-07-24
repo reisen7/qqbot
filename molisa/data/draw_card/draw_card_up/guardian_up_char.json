@@ -1,42 +1,30 @@
 {
     "char": {
-        "title": "本次up从7月7日开始，至7月21日结束。",
+        "title": "本次up从7月21日开始，至8月4日结束。",
         "pool_img": "",
-        "start_time": "2022-07-07T00:00:00",
-        "end_time": "2022-07-21T00:00:00",
+        "start_time": "2022-07-21T00:00:00",
+        "end_time": "2022-08-04T00:00:00",
         "up_char": [
             {
-                "name": "杰洛士",
+                "name": "康娜",
                 "star": 3,
                 "limited": false,
                 "zoom": 0.0
             },
             {
-                "name": "莉娜",
+                "name": "海滩科学家索菲",
                 "star": 3,
                 "limited": false,
                 "zoom": 0.0
             },
             {
-                "name": "卡麦尔",
+                "name": "奈莉",
                 "star": 3,
                 "limited": false,
                 "zoom": 0.0
             },
             {
-                "name": "贝丝",
-                "star": 3,
-                "limited": false,
-                "zoom": 0.0
-            },
-            {
-                "name": "诺克希娅",
-                "star": 3,
-                "limited": false,
-                "zoom": 0.0
-            },
-            {
-                "name": "加百列",
+                "name": "兰儿",
                 "star": 3,
                 "limited": false,
                 "zoom": 0.0
@@ -44,43 +32,31 @@
         ]
     },
     "arms": {
-        "title": "本次up从7月7日开始，至7月21日结束。",
+        "title": "本次up从7月21日开始，至8月4日结束。",
         "pool_img": "",
-        "start_time": "2022-07-07T00:00:00",
-        "end_time": "2022-07-21T00:00:00",
+        "start_time": "2022-07-21T00:00:00",
+        "end_time": "2022-08-04T00:00:00",
         "up_char": [
             {
-                "name": "杰洛士的权杖",
+                "name": "爱之深",
                 "star": 5,
                 "limited": false,
                 "zoom": 0.0
             },
             {
-                "name": "魔血玉",
+                "name": "涅瑞伊得斯",
                 "star": 5,
                 "limited": false,
                 "zoom": 0.0
             },
             {
-                "name": "年丰时稔",
+                "name": "仙玉",
                 "star": 5,
                 "limited": false,
                 "zoom": 0.0
             },
             {
-                "name": "猎食者",
-                "star": 5,
-                "limited": false,
-                "zoom": 0.0
-            },
-            {
-                "name": "紫魄",
-                "star": 5,
-                "limited": false,
-                "zoom": 0.0
-            },
-            {
-                "name": "圣母颂",
+                "name": "明镜止水",
                 "star": 5,
                 "limited": false,
                 "zoom": 0.0

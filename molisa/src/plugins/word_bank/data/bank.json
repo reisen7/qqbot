@@ -266,7 +266,11 @@
                 "[CQ:image,file=ab071a750d94d8dab296823a05f926d6.image,subType=1]",
                 "[CQ:image,file=3de3d29427802e195950edaab2bf3d6b.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-2479233756-3DE3D29427802E195950EDAAB2BF3D6B/0?term=3,subType=0]",
                 "[CQ:image,file=eee923732ae6510824e4bf5385f3844a.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-2755053557-EEE923732AE6510824E4BF5385F3844A/0?term=3,subType=0]",
-                "[CQ:image,file=42c83248bd43930153b3b7d11d5de581.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-3190356443-42C83248BD43930153B3B7D11D5DE581/0?term=3,subType=1]"
+                "[CQ:image,file=42c83248bd43930153b3b7d11d5de581.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-3190356443-42C83248BD43930153B3B7D11D5DE581/0?term=3,subType=1]",
+                "[CQ:image,file=4519927aa48dc0e9a0f9a4fcfab34827.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-2428524073-4519927AA48DC0E9A0F9A4FCFAB34827/0?term=3,subType=0]",
+                "[CQ:image,file=e07fee76aa809381ae32a109305fce9f.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-2796943998-E07FEE76AA809381AE32A109305FCE9F/0?term=3,subType=1]",
+                "[CQ:image,file=b7074b9a405499c44430fe6012ee806a.image,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-2230562083-B7074B9A405499C44430FE6012EE806A/0?term=3,subType=1]",
+                "[CQ:image,file=b35fbce9d9cab07ad9406e9d0f990e3e.image,subType=0,url=https://gchat.qpic.cn/gchatpic_new/328170849/1062564756-3142014479-B35FBCE9D9CAB07AD9406E9D0F990E3E/0?term=3]"
             ],
             "视频": [
                 "[CQ:video,file=be0a9d9621b0dfdee3d230225f208a27.video,url=http://111.30.174.153:80/qqdownload?ver=537097188&amp;rkey=3081f90201010481f13081ee020101020100020465cc95a50481a2333034663032303130303034333433303332303230313030303230343031313362333838303230333761316166663032303463333939303230393032303436326432323831383034313062653061396439363231623064666465653364323330323235663230386132373032303130303032303130303034313430303030303030383636363936633635373437393730363530303030303030343331333033303331020462d2281804350000000866696c657479706500000004313030330000000b646f776e656e63727970740000000130000000047175696300000001300400&amp;filetype=1003&amp;videotype=1&amp;subvideotype=0&amp;term=unknow]"
@@ -285,6 +289,9 @@
             ],
             "开启监听": [
                 "[CQ:xml,data=<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><msg serviceID=\"1\" templateID=\"-1\" action=\"web\" brief=\"小奏已进群监听聊天\" sourceMsgId=\"0\" url=\"\" flag=\"0\" adverSign=\"0\" multiMsgFlag=\"0\"><item layout=\"2\" advertiser_id=\"0\" aid=\"0\"><picture cover=\"https://gchat.qpic.cn/gchatpic_new/328170849/779624805-2442489698-33A501D3C7EEDC30296DA0812A1A0972/0\" w=\"0\" h=\"0\" /><title>小奏已进群监听聊天</title><summary>请注意聊天言辞</summary></item><source name=\"\" icon=\"\" action=\"\" appid=\"0\" /></msg>,resid=1]"
+            ],
+            "神仙客": [
+                "是的是的\r\n孩子\r\n人类因为各种物质的束缚\r\n苟活于世\r\n而神仙客却可以脱离人世间\r\n人生不能被道德束缚\r\n只要没有道德\r\n就不会被绑架\r\n是的是的\r\n孩子\r\n我们都是神仙客的信徒\r\n哈哈，世界开始搞笑了\r\n我是奇异搞笑小奏\r\n笑世界无知"
             ]
         },
         "822492001": {

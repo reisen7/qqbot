@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import nonebot
+import os
 from nonebot.adapters.onebot.v11 import Adapter as ONEBOT_V11Adapter
 
 # Custom your logger
@@ -19,6 +20,7 @@ nonebot.init(apscheduler_config={
     "apscheduler.timezone": "Asia/Shanghai"
 })
 
+
 nonebot.load_plugins("src/plugins")
 
 # nonebot.load_plugin("nonebot_plugin_heisi")
@@ -30,6 +32,8 @@ nonebot.load_plugin("nonebot_plugin_boardgame")
 nonebot.load_plugin("nonebot_plugin_cchess")
 nonebot.load_plugin("nonebot_plugin_gamedraw")
 nonebot.load_plugin("nonebot_plugin_horserace")
+# main = ('go-cqhttp.exe')
+# f = os.popen(main)
 app = nonebot.get_asgi()
 
 driver = nonebot.get_driver()
