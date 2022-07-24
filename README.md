@@ -11,15 +11,15 @@ Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN�
 
 #### 安装教程
 
-1.  下载
-2.  xxxx
-3.  xxxx
+1.  下载(使用git clone)
+2.  配置环境
+3.  配置登录的qq
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  点击go-cqhttp.exe
+2.  启动bot.py
+3.  控制台输入.\go-cqhttp.exe(或直接点击go-cqhttp.bat)
 
 #### 参与贡献
 
