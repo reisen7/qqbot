@@ -1,25 +1,26 @@
-# python机器人
+# 基于Python实现的QQ机器人
 
 #### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+通过 *Nonebot* 框架和 *gocq* 实现的QQ机器人
 
-#### 软件架构
-软件架构说明
+#### 软件
+需要python环境。且需要Python 3.8 以上版本
 
 
 #### 安装教程
 
-1.  下载(使用git clone)
-2.  配置环境
-3.  配置登录的qq
+1.  下载依赖
+~~~properties
+pip install
+~~~
+2.  修改配置 config.yml 里的qq号和密码
+3.  启动bot.py
 
 #### 使用说明
 
-1.  点击go-cqhttp.exe
-2.  启动bot.py
-3.  控制台输入.\go-cqhttp.exe(或直接点击go-cqhttp.bat)
+1.  保证端口不被占用
+2.  在配置中不填写账号密码则需要扫码
+3.  部署在云端建议更换 session.token 
 
 #### 参与贡献
 
@@ -28,12 +29,8 @@ Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN�
 3.  提交代码
 4.  新建 Pull Request
 
+#### 博主联系方式
 
-#### 特技
+![Alt text](https://picdm.sunbangyan.cn/2023/11/21/b684df632542b3d67745f8f37b654a21.jpeg)
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+
